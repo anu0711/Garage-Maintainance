@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Garage Management.Common", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Garage Management.DAL", "Garage Management.DAL\Garage Management.DAL.csproj", "{1CC362D1-9AE4-4086-AEAA-F853E6FA7AFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Garage Management.Migrator", "Garage Management.Migrator\Garage Management.Migrator.csproj", "{45B841A8-9CA3-4177-8AD8-CAC03AC098A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Garage Management.Migrator", "Garage Management.Migrator\Garage Management.Migrator.csproj", "{BFF44440-EC97-4D51-BD7E-F232CE616361}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +37,10 @@ Global
 		{1CC362D1-9AE4-4086-AEAA-F853E6FA7AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CC362D1-9AE4-4086-AEAA-F853E6FA7AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CC362D1-9AE4-4086-AEAA-F853E6FA7AFA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{45B841A8-9CA3-4177-8AD8-CAC03AC098A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{45B841A8-9CA3-4177-8AD8-CAC03AC098A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{45B841A8-9CA3-4177-8AD8-CAC03AC098A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{45B841A8-9CA3-4177-8AD8-CAC03AC098A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFF44440-EC97-4D51-BD7E-F232CE616361}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFF44440-EC97-4D51-BD7E-F232CE616361}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFF44440-EC97-4D51-BD7E-F232CE616361}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFF44440-EC97-4D51-BD7E-F232CE616361}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

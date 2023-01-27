@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "MXBnqveDqmk64cmhYmzsGr0s/rsOTwgiDBCv7Jrio/2bNecq1gyP+gPgRcj4akQGnjZ/uGaVnwmNWeQwtO87Vw==",
+  "dgSpecHash": "U8oNZhw8/t14faXKpn3rTWyJvGH47aj0tI5msgwNQSx/YLInktoNv/izjhwwnJYFM1tYsbPYnzzSU+JWXi3+dA==",
   "success": true,
   "projectFilePath": "D:\\Projects\\Nodejs\\Garage-Maintainance\\Garage Management\\Garage Management.DAL\\Garage Management.DAL.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Anuranchan M\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\Anuranchan M\\.nuget\\packages\\dapper.simplecrud\\2.3.0\\dapper.simplecrud.2.3.0.nupkg.sha512",
+    "C:\\Users\\Anuranchan M\\.nuget\\packages\\microsoft.csharp\\4.4.0\\microsoft.csharp.4.4.0.nupkg.sha512"
+  ],
   "logs": []
 }

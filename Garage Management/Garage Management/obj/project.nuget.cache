@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "dIfhRoyp5Ne01YNGUMlYkyXlD7nR6FUFXCuG1rQ30nvK0UAd3zPVQ/GhsZcn9jph5efBEQSJbpOyFoUpIGvqAA==",
+  "dgSpecHash": "BePsEc4Nsl0BD85EzpXnA+FnBYHg0u+6JQ4lgydn8EvpP6BOqtOzLAk7brqjB2egob3sSiWWTb8B1eKD6UnN+A==",
   "success": true,
   "projectFilePath": "D:\\Projects\\Nodejs\\Garage-Maintainance\\Garage Management\\Garage Management\\Garage Management.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Anuranchan M\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\Anuranchan M\\.nuget\\packages\\dapper.simplecrud\\2.3.0\\dapper.simplecrud.2.3.0.nupkg.sha512",
+    "C:\\Users\\Anuranchan M\\.nuget\\packages\\microsoft.csharp\\4.4.0\\microsoft.csharp.4.4.0.nupkg.sha512",
     "C:\\Users\\Anuranchan M\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Anuranchan M\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Anuranchan M\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
