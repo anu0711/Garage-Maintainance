@@ -1,0 +1,11 @@
+.appheader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}

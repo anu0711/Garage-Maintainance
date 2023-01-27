@@ -1,0 +1,35 @@
+<div class="parent">
+
+  <mat-toolbar class="appheader">
+    <mat-toolbar-row>
+      <ng-template [ngIf]="!isLogin">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+          (click)="opened=!opened">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </ng-template>
+      <span>Garage Management System</span>
+      <span class="example-spacer"></span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+
+  <mat-sidenav-container class="example-container" *ngIf="shouldRun">
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
+      (closed)="events.push('close!')">
+
+      <div style="width: 150px;">
+        <ul style="list-style: none;">
+          <li routerLink="/login">Login</li>
+        </ul>
+      </div>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content style="height: 100vh;">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+
+
+  </mat-sidenav-container>
+</div>
