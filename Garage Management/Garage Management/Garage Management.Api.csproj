@@ -15,4 +15,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Garage Management.BAL\Garage Management.BAL.csproj" />
+    <ProjectReference Include="..\Garage Management.Common\Garage Management.Common.csproj" />
+  </ItemGroup>
+
 </Project>

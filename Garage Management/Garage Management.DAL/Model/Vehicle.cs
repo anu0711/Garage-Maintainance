@@ -8,7 +8,7 @@ namespace Garage_Management.DAL.Model
 {
     public class Vehicle : Entity
     {
-        public Guid Id { get; set; }
+        public long Id { get; set; }
         public string VehicleName { get; set; }
         public string vehicleType { get; set; }
         public bool RcStatus { get; set; }

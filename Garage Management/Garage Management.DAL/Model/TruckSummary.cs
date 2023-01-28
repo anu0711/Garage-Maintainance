@@ -8,16 +8,16 @@ namespace Garage_Management.DAL.Model
 {
     public class TruckSummary:Entity
     {
-        public Guid Id { get; set; }
+        public long Id { get; set; }
 
-        public Guid GarageId { get; set; }
+        public long GarageId { get; set; }
 
-        public Guid TruckId { get; set; }
+        public long TruckId { get; set; }
 
-        public Guid EmployeeId { get; set; }
+        public long EmployeeId { get; set; }
 
         public string StartLocation { get; set; }
 
-        public Guid HaltLocation { get; set; }
+        public long HaltLocation { get; set; }
     }
 }

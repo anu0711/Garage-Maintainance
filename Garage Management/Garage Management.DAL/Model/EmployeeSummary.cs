@@ -8,9 +8,9 @@ namespace Garage_Management.DAL.Model
 {
     public class EmployeeSummary:Entity
     {
-        public Guid Id { get; set; }
+        public long Id { get; set; }
 
-        public Guid EmployeeId { get; set; }
+        public long EmployeeId { get; set; }
 
         public long LeaveDays { get; set; }
 

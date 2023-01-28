@@ -8,12 +8,15 @@ namespace Garage_Management.DAL.Model
 {
     public class Entity
     {
+
+        public long Id { get; set; }
+
         public DateTime DateCreated { get; set; }
 
         public DateTime DateModified { get; set; }
 
-        public Guid CreatedBy { get; set; }
+        public long CreatedBy { get; set; }
 
-        public Guid UpdatedBy { get; set; }
+        public long UpdatedBy { get; set; }
     }
 }

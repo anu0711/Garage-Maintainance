@@ -8,7 +8,7 @@ namespace Garage_Management.DAL.Model
 {
     public class Employee : Entity
     {
-        public Guid Id { get; set; }
+        public long Id { get; set; }
         public string Name { get; set; }
         public string LicenseNo { get; set; }
         public int Age { get; set; }
