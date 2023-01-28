@@ -10,6 +10,6 @@ export class AppComponent {
   opened: BooleanInput = false;
   shouldRun: any = true;
   events: any = []
-  isLogin = false
+  isLogin = window.location.pathname == "/register" || window.location.pathname == "/login";
 
 }
