@@ -3,15 +3,21 @@
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <mat-form-field>
             <input matInput placeholder="Email" formControlName="email" required>
+            <mat-error *ngIf="loginForm.get('email') && loginForm.get('email')">Email is
+                required</mat-error>
+            <mat-error *ngIf="loginForm.get('email') && loginForm.get('email')">Invalid email
+                address</mat-error>
         </mat-form-field>
         <br>
         <mat-form-field>
             <input matInput type="password" placeholder="Password" formControlName="password" required>
+            <mat-error *ngIf="loginForm.get('password')">Password is required</mat-error>
         </mat-form-field>
         <br>
         <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">Login</button>
         <hr>
         <br>
-        <button mat-raised-button routerLink="/register">Sign up</button>
+        <button routerLink="/register">Sign up</button>
+
     </form>
 </mat-card>
