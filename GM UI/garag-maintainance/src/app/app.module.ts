@@ -10,6 +10,8 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatNativeDateModule } from '@angular/material/core';
 import { MaterialExampleModule } from '../material.module'
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { RegisterComponent } from './register/register.component';
 
 @NgModule({
@@ -26,6 +28,7 @@ import { RegisterComponent } from './register/register.component';
     MatNativeDateModule,
     MaterialExampleModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegisterComponent }
