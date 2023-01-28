@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-
 export class LoginComponent {
   loginForm: FormGroup;
+  loginCount: number = 0;
 
   constructor(private formBuilder: FormBuilder) {
     this.loginForm = this.formBuilder.group({
@@ -20,5 +19,11 @@ export class LoginComponent {
 
   onSubmit() {
     console.log(this.loginForm.value);
+    if (this.loginForm.valid) {
+      const loginInfo = [this.loginForm.value.email, this.loginForm.value.password];
+      localStorage.setItem(`loginInfo${this.loginCount}`, JSON.stringify(loginInfo));
+      this.loginCount++;
+      console.log('Successful login');
+    }
   }
 }
