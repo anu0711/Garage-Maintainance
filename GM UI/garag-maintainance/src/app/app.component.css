@@ -9,3 +9,18 @@
     flex-direction: column;
     height: 100vh;
 }
+
+.nav-content {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.active {
+    background-color: #e91e6326;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.signup-card {
+    max-width: 400px;
+}
