@@ -12,12 +12,14 @@ import { MaterialExampleModule } from '../material.module'
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { RegisterComponent } from './register/register.component';
     RouterModule.forRoot([
       { path: "", pathMatch: "full", redirectTo: '/login' },
       { path: 'login', component: LoginComponent },
-      { path: 'register', component: RegisterComponent }
+      { path: 'register', component: RegisterComponent },
+      { path: 'dashboard', component: DashboardComponent }
     ])
   ],
   providers: [],

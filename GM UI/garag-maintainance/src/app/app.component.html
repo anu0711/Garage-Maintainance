@@ -18,8 +18,7 @@
     <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
       (closed)="events.push('close!')">
       <mat-nav-list>
-        <a mat-list-item routerLink="/register" routerLinkActive="active" (click)="opened=!opened">Register</a>
-        <a mat-list-item routerLink="/login" routerLinkActive="active" (click)="opened=!opened">Login</a>
+        <a mat-list-item routerLink="/dashboard" routerLinkActive="active" (click)="opened=!opened">Dashboard</a>
       </mat-nav-list>
       <!-- <li routerLink="/login" style="cursor: context-menu" routerLinkActive="active nav-content">Login</li> -->
 

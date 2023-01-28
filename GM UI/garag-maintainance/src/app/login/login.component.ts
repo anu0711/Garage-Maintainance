@@ -26,7 +26,7 @@ export class LoginComponent {
       localStorage.setItem(`loginInfo${this.loginCount}`, JSON.stringify(loginInfo));
       this.loginCount++;
       console.log('Successful login');
-      timer(5000).subscribe(() => this.router.navigate(['/register']));
+      timer(1000).subscribe(() => this.router.navigate(['/dashboard']));
     } else {
       console.log('localStorage is not available');
     }

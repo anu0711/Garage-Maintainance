@@ -1,0 +1,25 @@
+mat-grid-list {
+    margin: 16px;
+    padding: 16px;
+}
+
+mat-grid-tile {
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(58, 45, 45);
+}
+
+mat-card {
+    margin: 4x;
+    padding: 2px 1px;
+    background-color: #ceadad;
+}
+
+mat-card-title {
+    font-size: 20px;
+    color: black;
+}
+
+mat-card-content {
+    font-size: 25px;
+    color: black;
+}
