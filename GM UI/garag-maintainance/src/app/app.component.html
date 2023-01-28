@@ -2,7 +2,7 @@
 
   <mat-toolbar class="appheader">
     <mat-toolbar-row>
-      <ng-template [ngIf]="!isLogin">
+      <ng-template [ngIf]="!(window.location.pathname=='/login'||window.location.pathname=='/register')">
         <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
           (click)="opened=!opened">
           <mat-icon>menu</mat-icon>

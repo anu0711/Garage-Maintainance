@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   opened: BooleanInput = false;
   shouldRun: any = true;
-  events: any = []
-  isLogin = window.location.pathname == "/register" || window.location.pathname == "/login";
+  events: any = [];
+  window = window;
 
 }
