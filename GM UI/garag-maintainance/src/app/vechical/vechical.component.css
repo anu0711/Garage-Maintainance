@@ -1,0 +1,15 @@
+.mat-table {
+    background-color: #f2f2f2;
+    font-size: 14px;
+}
+
+
+.mat-header-cell {
+    color: #333;
+    font-weight: bold;
+}
+
+
+.mat-row {
+    border-bottom: 1px solid #ddd;
+}

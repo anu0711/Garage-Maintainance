@@ -6,6 +6,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class MessageHandlerService {
 
+
   constructor(private _snackBar: MatSnackBar) { }
 
   error(message: string) {
@@ -22,9 +23,10 @@ export class MessageHandlerService {
       panelClass: ['snackbar-success'],
       horizontalPosition: 'center',
       verticalPosition: 'top',
-      duration: 5000
+      duration: 1000
     })
   }
+
 
   info(message: string) {
     this._snackBar.open(message, 'Dismiss', {

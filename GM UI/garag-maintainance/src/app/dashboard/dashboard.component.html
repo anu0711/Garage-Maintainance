@@ -56,4 +56,28 @@
     </mat-grid-tile>
 </mat-grid-list>
 
+<div *ngIf="showForm">
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Vehicle make" [(ngModel)]="vehicleMake">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input matInput placeholder="Vehicle model" [(ngModel)]="vehicleModel">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input matInput placeholder="Vehicle color" [(ngModel)]="vehicleColor">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input matInput placeholder="Vehicle license plate" [(ngModel)]="vehicleLicensePlate">
+        </mat-form-field>
+        <br>
+        <button mat-button (click)="addVehicle()">Add Vehicle</button> <br><button mat-button
+            (click)="closeForm()">Close</button>
+    </form>
+</div>
 <button mat-button (click)="successMessage()">Click</button>
+<br>
+<button mat-button (click)="openForm()">Add</button>

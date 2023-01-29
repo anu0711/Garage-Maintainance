@@ -23,3 +23,18 @@ mat-card-content {
     font-size: 25px;
     color: black;
 }
+
+form {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+button {
+    margin-top: 20px;
+    width: 200px;
+}
