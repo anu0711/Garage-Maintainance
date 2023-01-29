@@ -1,3 +1,4 @@
+import { MessageHandlerService } from './../message-handler.service';
 import { Component } from '@angular/core';
 
 
@@ -8,5 +9,12 @@ import { Component } from '@angular/core';
 
 })
 export class DashboardComponent {
+
+  constructor(private Message: MessageHandlerService) { }
+
+
+  successMessage() {
+    this.Message.success("vakannakda Maple");
+  }
 
 }
