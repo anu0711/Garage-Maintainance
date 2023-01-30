@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
@@ -14,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { VechicalComponent } from './vechical/vechical.component';
+import { GarageComponent } from './Pages/garage/garage.component';
 
 
 @NgModule({
@@ -22,7 +24,8 @@ import { VechicalComponent } from './vechical/vechical.component';
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
-    VechicalComponent
+    VechicalComponent,
+    GarageComponent
   ],
   imports: [
     BrowserModule,
@@ -33,13 +36,15 @@ import { VechicalComponent } from './vechical/vechical.component';
     MaterialExampleModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     MatTableModule,
     RouterModule.forRoot([
       { path: "", pathMatch: "full", redirectTo: '/login' },
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
       { path: 'dashboard', component: DashboardComponent },
-      { path: 'vechical', component: VechicalComponent }
+      { path: 'vechical', component: VechicalComponent },
+      { path: 'garage', component: GarageComponent }
     ])
   ],
   schemas: [
