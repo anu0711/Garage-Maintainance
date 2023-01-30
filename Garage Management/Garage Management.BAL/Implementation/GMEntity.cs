@@ -1,8 +1,6 @@
-﻿using Dapper;
-
+﻿using System.Data;
+using Dapper;
 using Garage_Management.DAL.Model;
-using System.Data;
-using System.Data.SqlClient;
 
 namespace Garage_Management.BAL.Implementation
 {
@@ -11,15 +9,34 @@ namespace Garage_Management.BAL.Implementation
        
         public virtual async Task<T> AddorUpdate(T entity)
         {
-            using var connection = this.GetConnection();
-            if (entity.Id == 0 || entity.Id == null)
+            try
+            {
+                using var connection = this.GetConnection();
+                if (entity.Id == Guid.Empty)
+                {
+                    entity.CreatedDate = DateTime.Now;
+                    entity.UpdatedDate = DateTime.Now;
+                    entity.IsActive = true;
+                    entity.CreatedBy = Guid.NewGuid();
+                    entity.UpdatedBy = Guid.NewGuid();
+
+                    entity.Id = await connection.InsertAsync<Guid, T>(entity,null);
+
+                }
+                else
+                {
+                    entity.CreatedDate = DateTime.Now;
+                    entity.UpdatedDate = DateTime.Now;
+
+                    await connection.UpdateAsync(entity);
+                }
+                return entity;
+            }
+            catch (Exception e)
             {
 
-                entity.Id = await connection.InsertAsync<long, T>(entity);
-
+                throw new Exception(e.Message);
             }
-            return entity;
-
         }
 
         public IDbConnection GetConnection(IDbTransaction transaction = null)

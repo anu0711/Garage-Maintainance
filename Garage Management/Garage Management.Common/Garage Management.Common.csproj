@@ -14,4 +14,8 @@
     <PackageReference Include="Dapper.SimpleCRUD" Version="2.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Garage Management.DAL\Garage Management.DAL.csproj" />
+  </ItemGroup>
+
 </Project>

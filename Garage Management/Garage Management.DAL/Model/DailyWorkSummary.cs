@@ -9,7 +9,7 @@ namespace Garage_Management.DAL.Model
 {
     public class DailyWorkSummary:Entity
     {
-        public long Id { get; set; }
+        public Guid Id { get; set; }
 
         public long StartingKilometer { get; set; }
 
@@ -19,8 +19,8 @@ namespace Garage_Management.DAL.Model
 
         public long TotalEarnings { get; set; }
 
-        public long SpendingSummaryId { get; set; }
+        public Guid SpendingSummaryId { get; set; }
 
-        public long TruckSummaryId { get; set; }
+        public Guid TruckSummaryId { get; set; }
     }
 }

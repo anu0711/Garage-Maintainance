@@ -8,7 +8,7 @@ namespace Garage_Management.DAL.Model
 {
     public class MaintenanceSummary : Entity
     {
-        public long Id { get; set; }    
+        public Guid Id { get; set; }    
         public string Detail { get; set; }
         public long Amount { get; set; }
         public bool IsOwner { get; set; }
