@@ -1,0 +1,83 @@
+<mat-toolbar color="primary">
+    <span>Garage Management Dashboard</span>
+</mat-toolbar>
+
+<mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile>
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>
+                    <h4>Occupancy</h4>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>30%</p>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>
+                    <h4>Vehicle Count</h4>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>135</p>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>
+                    <h4>Available </h4>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>200</p>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>
+                    <h4>Income</h4>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>10000</p>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<div *ngIf="showForm">
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Vehicle make" [(ngModel)]="vehicleMake">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input matInput placeholder="Vehicle model" [(ngModel)]="vehicleModel">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input matInput placeholder="Vehicle color" [(ngModel)]="vehicleColor">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input matInput placeholder="Vehicle license plate" [(ngModel)]="vehicleLicensePlate">
+        </mat-form-field>
+        <br>
+        <button mat-button (click)="addVehicle()">Add Vehicle</button> <br><button mat-button
+            (click)="closeForm()">Close</button>
+    </form>
+</div>
+<button mat-button (click)="successMessage()">Click</button>
+<br>
+<button mat-button (click)="openForm()">Add</button>

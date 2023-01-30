@@ -1,8 +1,7 @@
 <div class="parent">
-
   <mat-toolbar class="appheader">
     <mat-toolbar-row>
-      <ng-template [ngIf]="!isLogin">
+      <ng-template [ngIf]="!(window.location.pathname=='/login'||window.location.pathname=='/register')">
         <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
           (click)="opened=!opened">
           <mat-icon>menu</mat-icon>
@@ -10,25 +9,41 @@
       </ng-template>
       <span>Garage Management System</span>
       <span class="example-spacer"></span>
+      <ng-template [ngIf]="!(window.location.pathname=='/login'||window.location.pathname=='/register')">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>person</mat-icon>
+            <span>Profile</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>settings</mat-icon>
+            <span>Settings</span>
+          </button>
+          <button mat-menu-item (click)="logout()">
+            <mat-icon>exit_to_app</mat-icon>
+            <span routerLink="/login" routerLinkActive="active" (click)="opened=!opened">Logout</span>
+          </button>
+        </mat-menu>
+      </ng-template>
     </mat-toolbar-row>
   </mat-toolbar>
-
-
   <mat-sidenav-container class="example-container" *ngIf="shouldRun">
     <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')"
       (closed)="events.push('close!')">
       <mat-nav-list>
-        <a mat-list-item routerLink="/register" routerLinkActive="active" (click)="opened=!opened">Register</a>
-        <a mat-list-item routerLink="/login" routerLinkActive="active" (click)="opened=!opened">Login</a>
+        <a mat-list-item routerLink="/dashboard" routerLinkActive="active" (click)="opened=!opened">Dashboard</a>
+      </mat-nav-list>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/vechical" routerLinkActive="active" (click)="opened=!opened">Vechical</a>
       </mat-nav-list>
       <!-- <li routerLink="/login" style="cursor: context-menu" routerLinkActive="active nav-content">Login</li> -->
-
     </mat-sidenav>
-
     <mat-sidenav-content style="height: 100vh;">
       <router-outlet></router-outlet>
     </mat-sidenav-content>
-
-
   </mat-sidenav-container>
+
 </div>

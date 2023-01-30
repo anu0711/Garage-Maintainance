@@ -4,6 +4,7 @@ form {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
+
 }
 
 .custom-class {
@@ -39,6 +40,10 @@ button:hover {
     background-color: #45a049;
 }
 
-titlelogin {
-    margin-left: 2%;
+.mat-mdc-card {
+    height: 100%;
+}
+
+.mat-mdc-form-field {
+    width: 100%;
 }

@@ -1,8 +1,8 @@
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { MatTableModule } from '@angular/material/table';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,14 +11,18 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MaterialExampleModule } from '../material.module'
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-
 import { RegisterComponent } from './register/register.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { VechicalComponent } from './vechical/vechical.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    DashboardComponent,
+    VechicalComponent
   ],
   imports: [
     BrowserModule,
@@ -29,10 +33,18 @@ import { RegisterComponent } from './register/register.component';
     MaterialExampleModule,
     FormsModule,
     ReactiveFormsModule,
+    MatTableModule,
     RouterModule.forRoot([
+      { path: "", pathMatch: "full", redirectTo: '/login' },
       { path: 'login', component: LoginComponent },
-      { path: 'register', component: RegisterComponent }
+      { path: 'register', component: RegisterComponent },
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'vechical', component: VechicalComponent }
     ])
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,7 +14,7 @@ export class LoginComponent {
 
   constructor(private formBuilder: FormBuilder, private router: Router) {
     this.loginForm = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.pattern(/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/)]],
       password: ['', Validators.required]
     });
   }
@@ -26,7 +26,7 @@ export class LoginComponent {
       localStorage.setItem(`loginInfo${this.loginCount}`, JSON.stringify(loginInfo));
       this.loginCount++;
       console.log('Successful login');
-      timer(5000).subscribe(() => this.router.navigate(['/register']));
+      timer(1000).subscribe(() => this.router.navigate(['/dashboard']));
     } else {
       console.log('localStorage is not available');
     }

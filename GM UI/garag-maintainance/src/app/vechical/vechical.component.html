@@ -1,0 +1,26 @@
+<mat-table [dataSource]="dataSource" [displayedColumns]="displayedColumns">
+
+    <ng-container matColumnDef="make">
+        <mat-header-cell *matHeaderCellDef> Make </mat-header-cell>
+        <mat-cell *matCellDef="let vehicle"> {{vehicle.make}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="model">
+        <mat-header-cell *matHeaderCellDef> Model </mat-header-cell>
+        <mat-cell *matCellDef="let vehicle"> {{vehicle.model}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="color">
+        <mat-header-cell *matHeaderCellDef> Color </mat-header-cell>
+        <mat-cell *matCellDef="let vehicle"> {{vehicle.color}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="licensePlate">
+        <mat-header-cell *matHeaderCellDef> License Plate </mat-header-cell>
+        <mat-cell *matCellDef="let vehicle"> {{vehicle.licensePlate}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+</mat-table>
