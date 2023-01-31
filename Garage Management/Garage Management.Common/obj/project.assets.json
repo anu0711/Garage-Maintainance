@@ -341,6 +341,22 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "Garage Management.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Azure.Identity": "1.8.1",
+          "Azure.Security.KeyVault.Secrets": "4.4.0",
+          "Dapper": "2.0.123",
+          "Dapper.SimpleCRUD": "2.3.0"
+        },
+        "compile": {
+          "bin/placeholder/Garage Management.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Garage Management.DAL.dll": {}
+        }
       }
     }
   },
@@ -996,6 +1012,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Garage Management.DAL/1.0.0": {
+      "type": "project",
+      "path": "../Garage Management.DAL/Garage Management.DAL.csproj",
+      "msbuildProject": "../Garage Management.DAL/Garage Management.DAL.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1003,7 +1024,8 @@
       "Azure.Identity >= 1.8.1",
       "Azure.Security.KeyVault.Secrets >= 4.4.0",
       "Dapper >= 2.0.123",
-      "Dapper.SimpleCRUD >= 2.3.0"
+      "Dapper.SimpleCRUD >= 2.3.0",
+      "Garage Management.DAL >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1038,7 +1060,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Projects\\Nodejs\\Garage-Maintainance\\Garage Management\\Garage Management.DAL\\Garage Management.DAL.csproj": {
+              "projectPath": "D:\\Projects\\Nodejs\\Garage-Maintainance\\Garage Management\\Garage Management.DAL\\Garage Management.DAL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

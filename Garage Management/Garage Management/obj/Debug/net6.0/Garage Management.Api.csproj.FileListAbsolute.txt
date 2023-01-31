@@ -1,3 +1,9 @@
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\obj\Debug\net6.0\Garage Management.Api.csproj.AssemblyReference.cache
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\obj\Debug\net6.0\Garage Management.Api.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\obj\Debug\net6.0\Garage Management.Api.AssemblyInfoInputs.cache
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\obj\Debug\net6.0\Garage Management.Api.AssemblyInfo.cs
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\obj\Debug\net6.0\Garage Management.Api.csproj.CoreCompileInputs.cache
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\obj\Debug\net6.0\Garage Management.Api.MvcApplicationPartsAssemblyInfo.cache
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\appsettings.Development.json
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\appsettings.json
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Garage Management.Api.exe
@@ -5,17 +11,49 @@ D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\D
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Garage Management.Api.runtimeconfig.json
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Garage Management.Api.dll
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Garage Management.Api.pdb
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Azure.Core.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Azure.Identity.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Azure.Security.KeyVault.Secrets.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Dapper.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Dapper.SimpleCRUD.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.AzureAD.UI.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.Graph.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.Graph.Core.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Newtonsoft.Json.dll
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\obj\Debug\net6.0\Garage Management.Api.csproj.AssemblyReference.cache
-D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\obj\Debug\net6.0\Garage Management.Api.GeneratedMSBuildEditorConfig.editorconfig
-D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\obj\Debug\net6.0\Garage Management.Api.AssemblyInfoInputs.cache
-D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\obj\Debug\net6.0\Garage Management.Api.AssemblyInfo.cs
-D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\obj\Debug\net6.0\Garage Management.Api.csproj.CoreCompileInputs.cache
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\System.Data.SqlClient.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\System.Memory.Data.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\System.Text.Json.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Garage Management.BAL.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Garage Management.Common.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Garage Management.DAL.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Garage Management.BAL.pdb
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Garage Management.Common.pdb
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Garage Management.DAL.pdb
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\obj\Debug\net6.0\Garage Management.Api.MvcApplicationPartsAssemblyInfo.cs
-D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\obj\Debug\net6.0\Garage Management.Api.MvcApplicationPartsAssemblyInfo.cache
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\obj\Debug\net6.0\staticwebassets.build.json
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\obj\Debug\net6.0\staticwebassets.development.json
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\obj\Debug\net6.0\scopedcss\bundle\Garage Management.Api.styles.css
@@ -25,3 +63,18 @@ D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\obj\D
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\obj\Debug\net6.0\Garage Management.Api.pdb
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\obj\Debug\net6.0\Garage Management.Api.genruntimeconfig.cache
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\obj\Debug\net6.0\ref\Garage Management.Api.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Azure.Security.KeyVault.Certificates.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.Identity.Web.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.Identity.Web.Certificate.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.Identity.Web.Certificateless.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.Identity.Web.TokenCache.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.IdentityModel.LoggingExtensions.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.IdentityModel.Validators.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\System.Security.Cryptography.Xml.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll

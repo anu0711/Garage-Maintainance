@@ -1,6 +1,10 @@
 ﻿using System.Data;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using Dapper;
 using Garage_Management.DAL.Model;
+using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
 
 namespace Garage_Management.BAL.Implementation
 {
@@ -21,13 +25,13 @@ namespace Garage_Management.BAL.Implementation
                     entity.UpdatedBy = Guid.NewGuid();
 
                     entity.Id = await connection.InsertAsync<Guid, T>(entity,null);
-
+                    
                 }
                 else
                 {
-                    entity.CreatedDate = DateTime.Now;
                     entity.UpdatedDate = DateTime.Now;
-
+                    entity.IsActive = true;
+                    entity.UpdatedBy = Guid.NewGuid();
                     await connection.UpdateAsync(entity);
                 }
                 return entity;
@@ -47,9 +51,7 @@ namespace Garage_Management.BAL.Implementation
             return connection;        
 
         }
-    }
-            
-       
+    }      
 }
 
     

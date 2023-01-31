@@ -10,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IUserManagement, UserManagement>();
+builder.Services.AddTransient<IAuthentication, Authentication>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

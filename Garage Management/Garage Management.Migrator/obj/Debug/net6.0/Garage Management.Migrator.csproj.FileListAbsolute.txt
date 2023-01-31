@@ -1,0 +1,34 @@
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\bin\Debug\net6.0\appsettings.Development.json
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\bin\Debug\net6.0\appsettings.json
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\bin\Debug\net6.0\Garage Management.Migrator.exe
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\bin\Debug\net6.0\Garage Management.Migrator.deps.json
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\bin\Debug\net6.0\Garage Management.Migrator.runtimeconfig.json
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\bin\Debug\net6.0\Garage Management.Migrator.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\bin\Debug\net6.0\Garage Management.Migrator.pdb
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\bin\Debug\net6.0\Azure.Core.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\bin\Debug\net6.0\Azure.Identity.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\bin\Debug\net6.0\Azure.Security.KeyVault.Secrets.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\bin\Debug\net6.0\Dapper.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\bin\Debug\net6.0\Dapper.SimpleCRUD.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\bin\Debug\net6.0\System.Memory.Data.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\obj\Debug\net6.0\Garage Management.Migrator.csproj.AssemblyReference.cache
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\obj\Debug\net6.0\Garage Management.Migrator.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\obj\Debug\net6.0\Garage Management.Migrator.AssemblyInfoInputs.cache
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\obj\Debug\net6.0\Garage Management.Migrator.AssemblyInfo.cs
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\obj\Debug\net6.0\Garage Management.Migrator.csproj.CoreCompileInputs.cache
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\obj\Debug\net6.0\Garage Management.Migrator.MvcApplicationPartsAssemblyInfo.cache
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\obj\Debug\net6.0\staticwebassets.build.json
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\obj\Debug\net6.0\staticwebassets.development.json
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\obj\Debug\net6.0\scopedcss\bundle\Garage Management.Migrator.styles.css
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\obj\Debug\net6.0\Garage Management.Migrator.csproj.CopyComplete
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\obj\Debug\net6.0\Garage Management.Migrator.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\obj\Debug\net6.0\refint\Garage Management.Migrator.dll
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\obj\Debug\net6.0\Garage Management.Migrator.pdb
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\obj\Debug\net6.0\Garage Management.Migrator.genruntimeconfig.cache
+D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management.Migrator\obj\Debug\net6.0\ref\Garage Management.Migrator.dll
