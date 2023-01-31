@@ -5,6 +5,11 @@
         <mat-cell *matCellDef="let vehicle"> {{vehicle.make}} </mat-cell>
     </ng-container>
 
+    <ng-container matColumnDef="customername">
+        <mat-header-cell *matHeaderCellDef> Customername </mat-header-cell>
+        <mat-cell *matCellDef="let vehicle"> {{vehicle.customername}} </mat-cell>
+    </ng-container>
+
     <ng-container matColumnDef="model">
         <mat-header-cell *matHeaderCellDef> Model </mat-header-cell>
         <mat-cell *matCellDef="let vehicle"> {{vehicle.model}} </mat-cell>
@@ -13,6 +18,13 @@
     <ng-container matColumnDef="color">
         <mat-header-cell *matHeaderCellDef> Color </mat-header-cell>
         <mat-cell *matCellDef="let vehicle"> {{vehicle.color}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="status">
+        <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+        <mat-cell *matCellDef="let vehicle" [style.background-color]="getStatusColor(vehicle.status)">
+            {{vehicle.status}}
+        </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="licensePlate">
