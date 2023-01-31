@@ -34,7 +34,7 @@ namespace Garage_Management.Controllers
             }
             catch(Exception E)
             {
-                throw new Exception($"Something went wrong in Registraton");
+                throw new Exception(E.Message);
             }
             
         }
