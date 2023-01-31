@@ -10,5 +10,7 @@ namespace Garage_Management.Common.Interfaces
     public interface IGarage
     {
         Task AddorUpdateGarage(Garage garage);
+
+        Task<List<Garage>> GetGarages();
     }
 }

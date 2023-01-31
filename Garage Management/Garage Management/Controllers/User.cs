@@ -38,5 +38,12 @@ namespace Garage_Management.Controllers
             }
             
         }
+
+        [HttpGet]
+        public async Task<List<Employee>> GetAllEmployee()
+        {
+           return await _usermanagement.GetAllEmployee();
+
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Garage_Management.Common.Interfaces;
+﻿using Dapper;
+using Garage_Management.Common.Interfaces;
 using Garage_Management.DAL.Model;
 using System;
 using System.Collections.Generic;
@@ -19,8 +20,15 @@ namespace Garage_Management.BAL.Implementation
             {               
                  await a.AddorUpdate(vehicle);               
             }
-
             
+        }
+
+        public async Task<List<Vehicle>> GetAllVehicles()
+        {
+            var b = new GMEntity<Vehicle>();
+            using var connection = b.GetConnection();
+            var data =await connection.QueryAsync<Vehicle>($"select * from Vehicle");
+            return data.ToList();
         }
     }
 }

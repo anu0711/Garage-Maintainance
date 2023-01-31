@@ -11,5 +11,7 @@ namespace Garage_Management.Common.Interfaces
     public interface IVehicle
     {
         Task AddorUpdateVehicle(Vehicle vehicle);
+
+        Task<List<Vehicle>> GetAllVehicles();
     }
 }

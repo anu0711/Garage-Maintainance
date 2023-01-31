@@ -21,5 +21,12 @@ namespace Garage_Management.Controllers
             await _vehicle.AddorUpdateVehicle(vehicle);
 
         }
+
+        [HttpGet]
+        
+        public async Task<List<Vehicle>> GetAllvehicle()
+        {
+            return await _vehicle.GetAllVehicles();
+        }
     }
 }

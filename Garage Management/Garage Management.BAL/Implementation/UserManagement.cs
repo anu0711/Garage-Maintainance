@@ -58,9 +58,15 @@ namespace Garage_Management.BAL.Implementation
                 
             }
 
+        }   
 
+        public async Task<List<Employee>> GetAllEmployee()
+        {
+            var d = new GMEntity<Employee>();
+            using var connection = d.GetConnection();
+            var data = await connection.QueryAsync<Employee>($"select * from Employee");
+             return data.ToList();
         }
-
     }
 
 

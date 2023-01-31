@@ -13,5 +13,7 @@ namespace Garage_Management.Common.Interfaces
         Task Registeruser(Employee employee);
 
         Task LoginRegister(LoginModel register);
+
+        Task<List<Employee>> GetAllEmployee();
     }
 }
