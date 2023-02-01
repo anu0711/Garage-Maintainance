@@ -1,5 +1,6 @@
 using Garage_Management.BAL.Implementation;
 using Garage_Management.Common.Interfaces;
+using Garage_Management.DAL.Model;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IUserManagement, UserManagement>();
+builder.Services.AddTransient<IVehicle, VehicleManagement>();
+builder.Services.AddTransient<IGarage, GarageManagement>();
+builder.Services.AddTransient<IDailyWorkSummary, DailyWorkManagement>();
 builder.Services.AddTransient<IAuthentication, Authentication>();
 var app = builder.Build();
 
