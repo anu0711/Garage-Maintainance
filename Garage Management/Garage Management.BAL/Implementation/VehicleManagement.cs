@@ -1,6 +1,8 @@
 ﻿using Dapper;
 using Garage_Management.Common.Interfaces;
+using Garage_Management.DAL.DomainModel;
 using Garage_Management.DAL.Model;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,10 +44,10 @@ namespace Garage_Management.BAL.Implementation
 
         }
 
-        public async Task<List<MaintenanceSummary>> GetMaintenanceSummary(MaintenanceSummary maintenanceSummary)
+        public async Task<List<MaintenanceSummaryDomain>> GetMaintenanceSummary()
         {
             var entity = new GMEntity<MaintenanceSummary>();
-            return (await entity.GetConnection().QueryAsync<MaintenanceSummary>("select * from maintenancesummary")).ToList();
+            return (await entity.GetConnection().QueryAsync<MaintenanceSummaryDomain>("select * from MaintenanceSummary inner join Vehicle on Vehicle.Id = MaintenanceSummary.TruckId")).ToList();
         }
     }
 }

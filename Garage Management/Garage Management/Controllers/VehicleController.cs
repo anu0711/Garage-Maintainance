@@ -1,4 +1,5 @@
 ﻿using Garage_Management.Common.Interfaces;
+using Garage_Management.DAL.DomainModel;
 using Garage_Management.DAL.Model;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,15 +31,15 @@ namespace Garage_Management.Controllers
         }
 
         [HttpPost]
-        public async Task<MaintenanceSummary> MaintenanceSummary(MaintenanceSummary maintenanceSummary)
+        public async Task<MaintenanceSummary> MaintenanceSummary([FromBody] MaintenanceSummary maintenanceSummary)
         {
             return await _vehicle.AddMaintenanceSummary(maintenanceSummary);
         }
 
         [HttpGet]
-        public async Task<List<Vehicle>> GetMaintainanceSummary()
+        public async Task<List<MaintenanceSummaryDomain>> GetMaintainanceSummary()
         {
-            return await _vehicle.GetAllVehicles();
+            return await _vehicle.GetMaintenanceSummary();
         }
 
 

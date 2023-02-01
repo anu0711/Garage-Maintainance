@@ -25,7 +25,6 @@ D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\D
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.Identity.Client.dll
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
-D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
 D:\Projects\Nodejs\Garage-Maintainance\Garage Management\Garage Management\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
