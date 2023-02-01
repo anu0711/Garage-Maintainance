@@ -30,5 +30,22 @@ namespace Garage_Management.BAL.Implementation
             var data =await connection.QueryAsync<Vehicle>($"select * from Vehicle");
             return data.ToList();
         }
+
+        public async Task<MaintenanceSummary> AddMaintenanceSummary(MaintenanceSummary maintenanceSummary)
+        {
+            var entity = new GMEntity<MaintenanceSummary>();
+            if (maintenanceSummary != null)
+            {
+                var Id = await entity.AddorUpdate(maintenanceSummary); 
+            }
+            return maintenanceSummary;
+
+        }
+
+        public async Task<List<MaintenanceSummary>> GetMaintenanceSummary(MaintenanceSummary maintenanceSummary)
+        {
+            var entity = new GMEntity<MaintenanceSummary>();
+            return (await entity.GetConnection().QueryAsync<MaintenanceSummary>("select * from maintenancesummary")).ToList();
+        }
     }
 }

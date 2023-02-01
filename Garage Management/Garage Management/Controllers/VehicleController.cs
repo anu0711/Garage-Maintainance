@@ -28,5 +28,19 @@ namespace Garage_Management.Controllers
         {
             return await _vehicle.GetAllVehicles();
         }
+
+        [HttpPost]
+        public async Task<MaintenanceSummary> MaintenanceSummary(MaintenanceSummary maintenanceSummary)
+        {
+            return await _vehicle.AddMaintenanceSummary(maintenanceSummary);
+        }
+
+        [HttpGet]
+        public async Task<List<Vehicle>> GetMaintainanceSummary()
+        {
+            return await _vehicle.GetAllVehicles();
+        }
+
+
     }
 }

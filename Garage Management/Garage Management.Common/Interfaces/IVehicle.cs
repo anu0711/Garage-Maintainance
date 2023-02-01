@@ -13,5 +13,7 @@ namespace Garage_Management.Common.Interfaces
         Task AddorUpdateVehicle(Vehicle vehicle);
 
         Task<List<Vehicle>> GetAllVehicles();
+
+        Task<MaintenanceSummary> AddMaintenanceSummary(MaintenanceSummary maintenanceSummary);
     }
 }
