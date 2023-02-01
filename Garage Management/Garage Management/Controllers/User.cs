@@ -10,17 +10,17 @@ namespace Garage_Management.Controllers
     public class User : ControllerBase
     {
         private readonly IUserManagement _usermanagement;
-
-        public User(IUserManagement usermanagement)
+        private readonly IAuthentication _authentication;
+        public User(IUserManagement usermanagement, IAuthentication authentication)
         {
             _usermanagement = usermanagement;
+            _authentication = authentication;
         }
-
 
         [HttpPost]
         public async void AddOrUpdateEmployee([FromBody] Employee employee)
         {
-             await _usermanagement.Registeruser(employee);
+            await _usermanagement.Registeruser(employee);
         }
 
         [HttpPost]
@@ -32,18 +32,27 @@ namespace Garage_Management.Controllers
                 await _usermanagement.LoginRegister(register);
 
             }
-            catch(Exception E)
+            catch (Exception E)
             {
                 throw new Exception(E.Message);
+                throw new Exception(E.Message);
             }
-            
+
         }
 
-        [HttpGet]
-        public async Task<List<Employee>> GetAllEmployee()
+        [HttpPost]
+        public async Task<string> Login([FromBody] LoginDetails loginDetails)
         {
-           return await _usermanagement.GetAllEmployee();
+            try
+            {
+                return await _authentication.Login(loginDetails);
+            }
+            catch (Exception e)
+            {
 
+                throw new Exception(e.Message);
+            }
         }
+
     }
 }
