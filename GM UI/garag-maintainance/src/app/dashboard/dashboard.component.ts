@@ -1,5 +1,6 @@
 import { MessageHandlerService } from './../message-handler.service';
-import { Component } from '@angular/core';
+import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 
 export interface Vehicle {
@@ -16,7 +17,11 @@ export interface Vehicle {
 
 })
 export class DashboardComponent {
-
+  openForm() {
+    throw new Error('Method not implemented.');
+  }
+  @ViewChild('dialogTemplate', { static: false })
+  dialogTemplate!: TemplateRef<any>;
 
   vehicleMake: string = '';
   vehicleModel: string = '';
@@ -25,7 +30,7 @@ export class DashboardComponent {
 
   public showForm: boolean = false;
 
-  constructor(private Message: MessageHandlerService) { }
+  constructor(private Message: MessageHandlerService, private dialog: MatDialog) { }
 
 
   successMessage() {
@@ -34,11 +39,13 @@ export class DashboardComponent {
   addVehicle() {
 
   }
-  public openForm() {
-    this.showForm = true;
+  openDialog() {
+    this.dialog.open(this.dialogTemplate);
   }
-  public closeForm() {
-    this.showForm = false;
+
+  closeDialog() {
+    this.dialog.closeAll();
   }
+
 
 }

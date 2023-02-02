@@ -18,6 +18,7 @@ import { VechicalComponent } from './vechical/vechical.component';
 import { GarageComponent } from './Pages/garage/garage.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
