@@ -12,5 +12,7 @@ namespace Garage_Management.Common.Interfaces
         Task AddorUpdateGarage(Garage garage);
 
         Task<List<Garage>> GetGarages();
+
+        Task<List<Garage>> SearchGarage(string searchkey);
     }
 }

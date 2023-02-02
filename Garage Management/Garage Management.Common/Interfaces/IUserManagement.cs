@@ -15,5 +15,7 @@ namespace Garage_Management.Common.Interfaces
         Task LoginRegister(LoginModel register);
 
         Task<List<Employee>> GetAllEmployee();
+
+        Task<List<Employee>> SearchEmployee(string searchkey);
     }
 }

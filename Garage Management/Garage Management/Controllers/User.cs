@@ -54,5 +54,11 @@ namespace Garage_Management.Controllers
             }
         }
 
+        [HttpGet]
+
+        public async Task<List<Employee>> SearchEmployee(string searchkey)
+        {
+            return await _usermanagement.SearchEmployee(searchkey);
+        }
     }
 }

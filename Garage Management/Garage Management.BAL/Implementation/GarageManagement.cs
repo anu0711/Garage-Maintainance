@@ -31,5 +31,22 @@ namespace Garage_Management.BAL.Implementation
             var data = await connection.QueryAsync<Garage>($"select * from Garage");
             return data.ToList();
         }
+
+        public async Task<List<Garage>> SearchGarage(string searchkey)
+        {
+            try
+            {
+                var connect = new GMEntity<Garage>();
+                using var connection = connect.GetConnection();
+                return (List<Garage>)await connection.QueryAsync<Garage>($"select * from garage where name LIKE '%{searchkey}%' or location LIKE '%{searchkey}%'");
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+
     }
 }

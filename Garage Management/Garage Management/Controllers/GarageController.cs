@@ -27,5 +27,11 @@ namespace Garage_Management.Controllers
         {
             return await _garage.GetGarages();
         }
+
+        [HttpGet]
+        public async Task<List<Garage>> SearchGarage(string searchkey)
+        {
+            return await _garage.SearchGarage(searchkey);
+        }
     }
 }
