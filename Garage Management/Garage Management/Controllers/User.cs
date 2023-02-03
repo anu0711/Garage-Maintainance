@@ -53,6 +53,18 @@ namespace Garage_Management.Controllers
                 throw new Exception(e.Message);
             }
         }
+        [HttpGet]
+        public string GetEmployeeCount()
+        {
+            return _usermanagement.GetEmployeeCount();
+        }
+
+        [HttpGet]
+
+        public async Task<List<Employee>> GetAllEmployee()
+        {
+            return await _usermanagement.GetAllEmployee();
+        }
 
         [HttpGet]
 

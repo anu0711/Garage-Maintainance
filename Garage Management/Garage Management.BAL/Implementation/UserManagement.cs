@@ -68,7 +68,16 @@ namespace Garage_Management.BAL.Implementation
              return data.ToList();
         }
 
-        public async Task<List<Employee>> SearchEmployee(string searchkey)
+        public string GetEmployeeCount()
+        {
+            var b = new GMEntity<Garage>();
+            using var connection = b.GetConnection();
+            var data = connection.Query($"select count(*)  as Garagecount from employee").FirstOrDefault();
+            return data.Garagecount.ToString();
+        }
+    
+
+    public async Task<List<Employee>> SearchEmployee(string searchkey)
         {
             try
             {

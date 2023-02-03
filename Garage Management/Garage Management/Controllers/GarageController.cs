@@ -33,5 +33,12 @@ namespace Garage_Management.Controllers
         {
             return await _garage.SearchGarage(searchkey);
         }
+
+
+        [HttpGet]
+        public string GetAllGarageCount()
+        {
+            return _garage.GetGarageCount();
+        }
     }
 }

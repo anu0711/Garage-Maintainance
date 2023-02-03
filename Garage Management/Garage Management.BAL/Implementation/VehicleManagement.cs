@@ -44,6 +44,8 @@ namespace Garage_Management.BAL.Implementation
 
         }
 
+
+
         public async Task<List<MaintenanceSummaryDomain>> GetMaintenanceSummary()
         {
             var entity = new GMEntity<MaintenanceSummary>();

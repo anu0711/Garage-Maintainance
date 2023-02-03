@@ -32,6 +32,13 @@ namespace Garage_Management.BAL.Implementation
             return data.ToList();
         }
 
+        public string GetGarageCount()
+        {
+            var b = new GMEntity<Garage>();
+            using var connection = b.GetConnection();
+            var data = connection.Query($"select count(*)  as Garagecount from garage").FirstOrDefault();
+            return data.Garagecount.ToString();
+        }
         public async Task<List<Garage>> SearchGarage(string searchkey)
         {
             try

@@ -14,5 +14,7 @@ namespace Garage_Management.Common.Interfaces
         Task<List<Garage>> GetGarages();
 
         Task<List<Garage>> SearchGarage(string searchkey);
+
+        string GetGarageCount();
     }
 }
