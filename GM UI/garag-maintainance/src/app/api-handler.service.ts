@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class ApiHandlerService {
 
+
   baseUrl: string = 'https://localhost:7123';
   constructor(private httpClient: HttpClient) { }
 
@@ -13,9 +14,17 @@ export class ApiHandlerService {
     return this.httpClient.get(this.baseUrl + '/posts');
   }
 
-  GetMaintainanceSummary() {
-    return this.httpClient.get(this.baseUrl + '/api/Vehicle/GetMaintainanceSummary')
+
+
+  GetAllGarage() {
+    return this.httpClient.get(this.baseUrl + '/api/Garage/GetAllGarage')
+  }
+  GetAllVehicle() {
+    return this.httpClient.get(this.baseUrl + '/api/Vehicle/GetAllvehicle')
   }
 
+  Addvehichel(vehicle: any) {
+    return this.httpClient.post(this.baseUrl + '/api/Vehicle/AddorUpdateVehicle', {})
+  }
 
 }
