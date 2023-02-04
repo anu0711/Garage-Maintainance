@@ -9,11 +9,11 @@ import { ApiHandlerService } from 'src/app/api-handler.service';
   template: `
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <th mat-header-cell *matHeaderCellDef><strong style="font-size: large;">Name</strong></th>
       <td mat-cell *matCellDef="let garage"> {{garage.name}} </td>
     </ng-container>
     <ng-container matColumnDef="location">
-      <th mat-header-cell *matHeaderCellDef> Location </th>
+      <th mat-header-cell *matHeaderCellDef><strong style="font-size: large;">Location</strong></th>
       <td mat-cell *matCellDef="let garage"> {{garage.location}} </td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

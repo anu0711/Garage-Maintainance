@@ -23,8 +23,8 @@ export class ApiHandlerService {
     return this.httpClient.get(this.baseUrl + '/api/Vehicle/GetAllvehicle')
   }
 
-  Addvehichel(vehicle: any) {
-    return this.httpClient.post(this.baseUrl + '/api/Vehicle/AddorUpdateVehicle', {})
-  }
+  // Addvehichel(vehicle: any) {
+  //   return this.httpClient.post(this.baseUrl + '/api/Vehicle/AddorUpdateVehicle', {})
+  // }
 
 }
