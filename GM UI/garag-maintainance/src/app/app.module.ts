@@ -16,6 +16,8 @@ import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { VechicalComponent } from './vechical/vechical.component';
 import { GarageComponent } from './Pages/garage/garage.component';
+import { DailyworkComponent } from './dailywork/dailywork.component';
+import { MaintanancesummaryComponent } from './maintanancesummary/maintanancesummary.component';
 
 
 
@@ -26,7 +28,9 @@ import { GarageComponent } from './Pages/garage/garage.component';
     RegisterComponent,
     DashboardComponent,
     VechicalComponent,
-    GarageComponent
+    GarageComponent,
+    DailyworkComponent,
+    MaintanancesummaryComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,9 @@ import { GarageComponent } from './Pages/garage/garage.component';
       { path: 'register', component: RegisterComponent },
       { path: 'dashboard', component: DashboardComponent },
       { path: 'vechical', component: VechicalComponent },
-      { path: 'garage', component: GarageComponent }
+      { path: 'garage', component: GarageComponent },
+      { path: 'dailywork', component: DailyworkComponent },
+      { path: 'maintanancesummary', component: MaintanancesummaryComponent }
     ])
   ],
   schemas: [

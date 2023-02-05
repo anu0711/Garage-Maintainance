@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -22,9 +22,19 @@ export class ApiHandlerService {
   GetAllVehicle() {
     return this.httpClient.get(this.baseUrl + '/api/Vehicle/GetAllvehicle')
   }
+  GetAllDailywork() {
+    return this.httpClient.get(this.baseUrl + '/api/DailyWork/GetAllDailyWork')
+  }
+  GetMaintainanceSummary() {
+    return this.httpClient.get(this.baseUrl + '/api/Vehicle/GetMaintainanceSummary')
 
-  // Addvehichel(vehicle: any) {
-  //   return this.httpClient.post(this.baseUrl + '/api/Vehicle/AddorUpdateVehicle', {})
-  // }
+  }
+  addOrUpdateGarage(garage: any) {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+
+    return this.httpClient.post(this.baseUrl + '/api/Garage/AddorUpdateGarage', garage, { headers });
+  }
 
 }
