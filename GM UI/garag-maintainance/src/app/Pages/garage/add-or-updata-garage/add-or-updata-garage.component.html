@@ -1,0 +1,23 @@
+<div class="padding">
+
+    <h2 *ngIf="isEdit">Edit Garage</h2>
+    <h2 *ngIf="!isEdit">Add Garage</h2>
+
+    <form [formGroup]="form" (ngSubmit)="onFormSubmit()">
+        <mat-form-field>
+            <mat-label>Garage Name</mat-label>
+            <input matInput class="width-100" formControlName="name">
+            <mat-error *ngIf=" name?.invalid && name?.errors?.required ">Garage Name field is
+                Required</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Garage Location</mat-label>
+            <input matInput class="width-100" formControlName="location">
+            <mat-error *ngIf=" location?.invalid && location?.errors?.required ">Garage Location field is
+                Required</mat-error>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button mat-primary class='width-100' type="submit" [disabled]="!form.valid">Submit</button>
+    </form>
+</div>

@@ -19,6 +19,7 @@ import { GarageComponent } from './Pages/garage/garage.component';
 import { DailyworkComponent } from './dailywork/dailywork.component';
 import { MaintanancesummaryComponent } from './maintanancesummary/maintanancesummary.component';
 import { AddOrUpdataVehicleComponent } from './vechical/add-or-updata-vehicle/add-or-updata-vehicle.component';
+import { AddOrUpdataGarageComponent } from './Pages/garage/add-or-updata-garage/add-or-updata-garage.component';
 
 
 
@@ -32,7 +33,8 @@ import { AddOrUpdataVehicleComponent } from './vechical/add-or-updata-vehicle/ad
     GarageComponent,
     DailyworkComponent,
     MaintanancesummaryComponent,
-    AddOrUpdataVehicleComponent
+    AddOrUpdataVehicleComponent,
+    AddOrUpdataGarageComponent
   ],
   imports: [
     BrowserModule,
