@@ -1,3 +1,5 @@
+import { AddOrUpdataVehicleComponent } from './add-or-updata-vehicle/add-or-updata-vehicle.component';
+import { MatDialog } from '@angular/material/dialog';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatTableDataSource } from '@angular/material/table';
@@ -16,7 +18,14 @@ export class VechicalComponent implements OnInit {
   dataSource = new MatTableDataSource(this.vehicles);
 
 
-  constructor(private http: ApiHandlerService) { }
+  constructor(private http: ApiHandlerService, public dialog: MatDialog) { }
+
+  openDialog() {
+    const dialog = this.dialog.open(AddOrUpdataVehicleComponent, { width: '400px', panelClass: 'custom-dialog-container', data: this.displayedColumns });
+    dialog.afterClosed().subscribe((result: any) => {
+      console.log('colsed');
+    })
+  }
 
   ngOnInit() {
     this.http.GetAllVehicle()
@@ -24,9 +33,6 @@ export class VechicalComponent implements OnInit {
         this.vehicles = Object.values(data);
         this.dataSource = new MatTableDataSource(this.vehicles);
         console.log(this.dataSource);
-        debugger;
       });
-
-
   }
 }

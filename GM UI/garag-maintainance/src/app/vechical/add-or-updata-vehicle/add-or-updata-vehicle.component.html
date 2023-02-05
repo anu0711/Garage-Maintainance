@@ -1,0 +1,48 @@
+<div class="padding">
+
+    <h2 *ngIf="isEdit">Edit Vehicle</h2>
+    <h2 *ngIf="!isEdit">Add Vehicle</h2>
+
+    <form [formGroup]="form" (ngSubmit)="onFormSubmit()">
+        <mat-form-field>
+            <mat-label>Vehicle Name</mat-label>
+            <input matInput class="width-100" formControlName="vehicleName">
+            <mat-error *ngIf=" vehicleName?.invalid && vehicleName?.errors?.required ">Vehicle Name field is
+                Required</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Vehicle Type</mat-label>
+            <input matInput class="width-100" formControlName="vehicleType">
+            <mat-error *ngIf=" vehicleType?.invalid && vehicleType?.errors?.required ">Vehicle Type field is
+                Required</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Vehicle Number</mat-label>
+            <input matInput class="width-100" formControlName="vehicleNumber">
+            <mat-error *ngIf=" vehicleNumber?.invalid && vehicleNumber?.errors?.required ">Vehicle Number field is
+                Required</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Vehicle Insurance</mat-label>
+            <input matInput [matDatepicker]="picker" class="width-100" formControlName="insuranceValidation">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf=" insuranceValidation?.invalid && insuranceValidation?.errors?.required ">Vehicle Insurance
+                Date is Required</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Vehicle Fitness</mat-label>
+            <input matInput class="width-100" formControlName="fitnessValidation">
+            <mat-error *ngIf=" fitnessValidation?.invalid && fitnessValidation?.errors?.required ">Fitness statement is
+                Required</mat-error>
+        </mat-form-field>
+        <br>
+
+        <button mat-raised-button mat-primary class='width-100' type="submit" [disabled]="!form.valid">Submit</button>
+
+    </form>
+</div>

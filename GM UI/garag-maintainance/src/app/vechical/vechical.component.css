@@ -1,0 +1,4 @@
+.custom-dialog-container .mat-dialog-container {
+    overflow-y: hidden;
+    padding: 5%;
+}

@@ -1,6 +1,9 @@
 <ng-container *ngIf="loading">
     <mat-progress-bar mode="indeterminate"></mat-progress-bar>
 </ng-container>
+
+<button mat-raised-button color="primary" (click)="openDialog()">Add</button>
+
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <ng-container matColumnDef="vehicleName">
         <th mat-header-cell *matHeaderCellDef><strong style="font-size: large;">vehicleName</strong></th>
