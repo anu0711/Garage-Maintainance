@@ -45,7 +45,6 @@ namespace Garage_Management.BAL.Implementation
         {
             var entity = new GMEntity<MaintenanceSummary>();
             {
-                maintenanceSummary.ImageLink = " ";
                 var Id = await entity.AddorUpdate(maintenanceSummary); 
             }
             return maintenanceSummary;
