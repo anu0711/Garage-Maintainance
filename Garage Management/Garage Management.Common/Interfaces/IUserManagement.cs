@@ -16,6 +16,8 @@ namespace Garage_Management.Common.Interfaces
 
         Task<List<Employee>> GetAllEmployee();
 
+        Task<Employee> GetBankDetails(Guid id);
+
         string GetEmployeeCount();
 
         Task<List<Employee>> SearchEmployee(string searchkey);

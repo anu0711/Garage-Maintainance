@@ -8,7 +8,6 @@ namespace Garage_Management.DAL.Model
 {
     public class LoginDetails : Entity
     {
-        public string Name { get; set; }
         public string Password { get; set; }
         public string EmailId { get;set; }  
         public Guid EmployeeId { get; set; }
