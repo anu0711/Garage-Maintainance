@@ -2,6 +2,7 @@
 using Garage_Management.Common.Interfaces;
 using Garage_Management.DAL.DomainModel;
 using Garage_Management.DAL.Model;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,13 @@ namespace Garage_Management.BAL.Implementation
 {
     public class VehicleManagement : IVehicle
     {
+        private readonly IBlob _blob;
+
+        public VehicleManagement(IBlob blob)
+        {
+            _blob = blob;
+        }
+       
         public async Task AddorUpdateVehicle(Vehicle vehicle)
         {
             var a = new GMEntity<Vehicle>();
@@ -36,7 +44,6 @@ namespace Garage_Management.BAL.Implementation
         public async Task<MaintenanceSummary> AddMaintenanceSummary(MaintenanceSummary maintenanceSummary)
         {
             var entity = new GMEntity<MaintenanceSummary>();
-            if (maintenanceSummary != null)
             {
                 var Id = await entity.AddorUpdate(maintenanceSummary); 
             }

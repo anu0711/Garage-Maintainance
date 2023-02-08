@@ -5,12 +5,11 @@ using Garage_Management.DAL.Model;
 
 namespace Garage_Management.BAL.Implementation
 {
-    public class UserManagement: IUserManagement
+    public class UserManagement:GMEntity<Employee>, IUserManagement
     {
         public async Task Registeruser(Employee employee)
         {
-            var a = new GMEntity<Employee>();
-            using var connection = a.GetConnection();
+            using var connection = this.GetConnection();
             if (employee.LicenseNo == null)
             {
                 throw new ArgumentNullException(nameof(employee));
@@ -22,15 +21,14 @@ namespace Garage_Management.BAL.Implementation
                 throw new Exception(message: "Sorry..!, The LicenseNo is Already Exists");
             }
 
-            var EmployeeId = a.AddorUpdate(employee);
+            var EmployeeId = this.AddorUpdate(employee);
 
         }
 
         public async Task LoginRegister(LoginModel register)
         {
-            var b = new GMEntity<Employee>();
+            
             var c = new GMEntity<LoginDetails>();
-            using var connection = b.GetConnection();
 
             if(register != null)
             {
@@ -47,12 +45,11 @@ namespace Garage_Management.BAL.Implementation
                 employee.IFSC = register.IFSC;
                 employee.IdType = register.IdType;
 
-                var Id = b.AddorUpdate(employee);
+                var Id = this.AddorUpdate(employee);
 
                 var loginDetails = new LoginDetails();
-                loginDetails.Password = register.Password;
+                loginDetails.Password = this.GeneratePassword(10);
                 loginDetails.EmailId = register.EmailId;
-                loginDetails.Name = register.Name;
                 loginDetails.EmployeeId = Id.Result.Id;
                 var id2 = c.AddorUpdate(loginDetails);
                 
@@ -62,27 +59,24 @@ namespace Garage_Management.BAL.Implementation
 
         public async Task<List<Employee>> GetAllEmployee()
         {
-            var d = new GMEntity<Employee>();
-            using var connection = d.GetConnection();
+            using var connection = this.GetConnection();
             var data = await connection.QueryAsync<Employee>($"select * from Employee");
              return data.ToList();
         }
 
         public string GetEmployeeCount()
         {
-            var b = new GMEntity<Garage>();
-            using var connection = b.GetConnection();
+            using var connection = this.GetConnection();
             var data = connection.Query($"select count(*)  as Garagecount from employee").FirstOrDefault();
             return data.Garagecount.ToString();
         }
     
 
-    public async Task<List<Employee>> SearchEmployee(string searchkey)
+        public async Task<List<Employee>> SearchEmployee(string searchkey)
         {
             try
             {
-                var connect = new GMEntity<Employee>();
-                using var connection = connect.GetConnection();
+                using var connection = this.GetConnection();
                 return (List<Employee>)await connection.QueryAsync<Employee>($"select * from Employee where name LIKE '%{searchkey}%'");
 
             }
@@ -91,6 +85,37 @@ namespace Garage_Management.BAL.Implementation
                 throw new Exception(e.Message);
             }
 
+        }
+
+        public async Task<Employee> GetBankDetails(Guid id)
+        {
+            try
+            {
+                var connection = this.GetConnection();
+                var result = (await connection.QueryAsync<Employee>($"select * from employee where id = '{id}'")).FirstOrDefault();
+                return result;
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
+        }
+
+        public async Task DeleteEmployee(Employee employee)
+        {
+            try
+            {
+                var dbconnect = new GMEntity<Employee>();
+                using var connection = dbconnect.GetConnection();
+                await connection.QueryAsync<Employee>("Delete from Employee where Id = @Id", new { Id = employee.Id });
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+
+            }
+            
         }
     }
 

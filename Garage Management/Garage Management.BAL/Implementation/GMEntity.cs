@@ -1,10 +1,8 @@
 ﻿using System.Data;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
+using System.Security.Cryptography;
 using Dapper;
 using Garage_Management.DAL.Model;
-using Microsoft.IdentityModel.Tokens;
-using Newtonsoft.Json;
+
 
 namespace Garage_Management.BAL.Implementation
 {
@@ -51,7 +49,22 @@ namespace Garage_Management.BAL.Implementation
             return connection;        
 
         }
-    }      
+
+        public string GeneratePassword(int length)
+        {
+            const string validChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            var cryptoServiceProvider = new RNGCryptoServiceProvider();
+            byte[] randomBytes = new byte[length];
+            cryptoServiceProvider.GetBytes(randomBytes);
+            char[] randomChars = new char[length];
+            for (int i = 0; i < randomBytes.Length; i++)
+            {
+                randomChars[i] = validChars[randomBytes[i] % validChars.Length];
+            }
+            return new string(randomChars);
+        }
+        
+}      
 }
 
     

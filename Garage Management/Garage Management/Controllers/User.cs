@@ -67,10 +67,23 @@ namespace Garage_Management.Controllers
         }
 
         [HttpGet]
+        public async Task<Employee> GetBankDetails(Guid Id)
+        {
+            return await _usermanagement.GetBankDetails(Id);
+        }
+
+        [HttpGet]
 
         public async Task<List<Employee>> SearchEmployee(string searchkey)
         {
             return await _usermanagement.SearchEmployee(searchkey);
+        }
+
+        [HttpDelete]
+
+        public async Task RemoveEmployee([FromBody] Employee employee)
+        {
+            await _usermanagement.DeleteEmployee(employee);
         }
     }
 }

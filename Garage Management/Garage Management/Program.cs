@@ -16,6 +16,7 @@ builder.Services.AddTransient<IVehicle, VehicleManagement>();
 builder.Services.AddTransient<IGarage, GarageManagement>();
 builder.Services.AddTransient<IDailyWorkSummary, DailyWorkManagement>();
 builder.Services.AddTransient<IAuthentication, Authentication>();
+builder.Services.AddTransient<IBlob, Blob>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

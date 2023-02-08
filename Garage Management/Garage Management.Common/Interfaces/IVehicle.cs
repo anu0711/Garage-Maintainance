@@ -1,6 +1,7 @@
 ﻿using Garage_Management.BAL.DomainModel;
 using Garage_Management.DAL.DomainModel;
 using Garage_Management.DAL.Model;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace Garage_Management.Common.Interfaces
 
         Task<List<Vehicle>> GetAllVehicles();
 
-        Task<MaintenanceSummary> AddMaintenanceSummary(MaintenanceSummary maintenance);
+        Task<MaintenanceSummary> AddMaintenanceSummary(MaintenanceSummary maintenanceSummary);
 
 
         Task<List<MaintenanceSummaryDomain>> GetMaintenanceSummary();
