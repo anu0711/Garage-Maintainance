@@ -18,6 +18,6 @@ namespace Garage_Management.DAL.Model
 
         public string StartLocation { get; set; }
 
-        public long HaltLocation { get; set; }
+        public string HaltLocation { get; set; }
     }
 }

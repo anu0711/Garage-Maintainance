@@ -85,5 +85,12 @@ namespace Garage_Management.Controllers
         {
             await _usermanagement.DeleteEmployee(employee);
         }
+
+        [HttpGet]
+
+        public async Task<List<Employee>> GetById (Guid Id)
+        {
+            return await _usermanagement.GetById(Id);
+        }
     }
 }

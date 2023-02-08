@@ -117,10 +117,24 @@ namespace Garage_Management.BAL.Implementation
             }
             
         }
+
+        public async Task<List<Employee>> GetById(Guid id)
+        {
+            try
+            {
+                var dbconnect = new GMEntity<Employee>();
+                using var connection = dbconnect.GetConnection();
+                var result = await connection.QueryAsync<Employee>($"select * from Employee where Id = @Id",new { Id = id });
+                return result.ToList();
+
+            }
+            catch(Exception e)
+            {
+                throw new Exception(e.Message);
+
+            }
+           
+        }
     }
-
-
-    
-
     
 }

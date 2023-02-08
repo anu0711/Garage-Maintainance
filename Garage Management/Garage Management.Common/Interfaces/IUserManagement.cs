@@ -23,5 +23,7 @@ namespace Garage_Management.Common.Interfaces
         Task<List<Employee>> SearchEmployee(string searchkey);
 
          Task DeleteEmployee(Employee employee);
+
+        Task<List<Employee>> GetById(Guid id);
     }
 }
