@@ -101,6 +101,22 @@ namespace Garage_Management.BAL.Implementation
                 throw new Exception(e.Message);
             }
         }
+
+        public async Task DeleteEmployee(Employee employee)
+        {
+            try
+            {
+                var dbconnect = new GMEntity<Employee>();
+                using var connection = dbconnect.GetConnection();
+                await connection.QueryAsync<Employee>("Delete from Employee where Id = @Id", new { Id = employee.Id });
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+
+            }
+            
+        }
     }
 
 

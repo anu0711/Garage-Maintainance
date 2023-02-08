@@ -1,4 +1,5 @@
-﻿using Garage_Management.Common.Interfaces;
+﻿using Garage_Management.BAL.Implementation;
+using Garage_Management.Common.Interfaces;
 using Garage_Management.DAL.Model;
 using Microsoft.AspNetCore.Mvc;
 
@@ -39,6 +40,13 @@ namespace Garage_Management.Controllers
         public string GetAllGarageCount()
         {
             return _garage.GetGarageCount();
+        }
+
+        [HttpDelete]
+
+        public async Task RemoveGarage([FromBody] Garage garage)
+        {
+            await _garage.DeleteGarage(garage);
         }
     }
 }

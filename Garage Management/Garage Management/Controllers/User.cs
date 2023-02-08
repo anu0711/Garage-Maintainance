@@ -78,5 +78,12 @@ namespace Garage_Management.Controllers
         {
             return await _usermanagement.SearchEmployee(searchkey);
         }
+
+        [HttpDelete]
+
+        public async Task RemoveEmployee([FromBody] Employee employee)
+        {
+            await _usermanagement.DeleteEmployee(employee);
+        }
     }
 }

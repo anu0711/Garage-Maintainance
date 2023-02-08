@@ -16,5 +16,6 @@ namespace Garage_Management.Common.Interfaces
         Task<List<Garage>> SearchGarage(string searchkey);
 
         string GetGarageCount();
+        Task DeleteGarage(Garage garage);
     }
 }

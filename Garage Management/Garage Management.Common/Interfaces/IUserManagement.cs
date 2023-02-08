@@ -21,5 +21,7 @@ namespace Garage_Management.Common.Interfaces
         string GetEmployeeCount();
 
         Task<List<Employee>> SearchEmployee(string searchkey);
+
+         Task DeleteEmployee(Employee employee);
     }
 }

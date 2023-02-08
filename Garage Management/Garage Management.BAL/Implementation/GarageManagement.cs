@@ -54,6 +54,20 @@ namespace Garage_Management.BAL.Implementation
             }
         }
 
+        public async Task DeleteGarage(Garage garage)
+        {
+            try
+            {
+                var dbconnect = new GMEntity<Garage>();
+                using var connection = dbconnect.GetConnection();
+                await connection.QueryAsync<Garage>("Delete from garage where Id = @Id", new {Id = garage.Id});
+            }
+            catch(Exception e)
+            {
+                throw new Exception(e.Message);
 
+            }
+           
+        }
     }
 }
