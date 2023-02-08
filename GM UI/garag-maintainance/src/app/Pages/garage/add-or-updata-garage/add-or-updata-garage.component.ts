@@ -1,6 +1,8 @@
 import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatTableDataSource } from '@angular/material/table';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-add-or-updata-garage',
@@ -11,8 +13,9 @@ export class AddOrUpdataGarageComponent {
 
   isEdit: boolean;
 
+
   constructor(public dialogRef: MatDialogRef<AddOrUpdataGarageComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any, public fb: FormBuilder) {
+    @Inject(MAT_DIALOG_DATA) public data: any, public fb: FormBuilder, private http: HttpClient) {
     this.isEdit = false
   }
   form = new FormGroup({
@@ -28,7 +31,18 @@ export class AddOrUpdataGarageComponent {
   }
 
   onFormSubmit() {
-    console.log(this.form.value);
+    const url = 'https://localhost:7123/api/Garage/AddorUpdateGarage';
+    this.http.post(url, this.form.value)
+      .subscribe(response => {
+        console.log(response);
+        location.reload();
+      });
   }
+
+
+
+
+
+
 
 }

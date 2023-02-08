@@ -23,7 +23,6 @@ export class MaintanancesummaryComponent implements OnInit {
         this.maintanancesummary = Object.values(data);
         this.dataSource = new MatTableDataSource(this.maintanancesummary);
         console.log(this.dataSource);
-        debugger;
       });
 
 

@@ -1,9 +1,10 @@
 import { MatDialog } from '@angular/material/dialog';
 import { AddOrUpdataGarageComponent } from './add-or-updata-garage/add-or-updata-garage.component';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { ApiHandlerService } from 'src/app/api-handler.service';
 import { FormControl, FormGroup } from '@angular/forms';
+import { MatPaginator } from '@angular/material/paginator';
 
 
 @Component({
@@ -11,10 +12,13 @@ import { FormControl, FormGroup } from '@angular/forms';
   templateUrl: './garage.component.html',
   styles: []
 })
+
+
 export class GarageComponent implements OnInit {
   loading: boolean | undefined
   garageForm: any;
   formType = 'Add';
+
 
   vehicle = {
     vehicleName: '',
@@ -28,7 +32,9 @@ export class GarageComponent implements OnInit {
   apiService: any;
 
 
+
   constructor(private http: ApiHandlerService, public dialog: MatDialog) { }
+
 
   ngOnInit() {
     this.http.GetAllGarage()
@@ -36,7 +42,6 @@ export class GarageComponent implements OnInit {
         this.garages = Object.values(data);
         this.dataSource = new MatTableDataSource(this.garages);
         console.log(this.dataSource);
-        debugger;
       });
   }
 
