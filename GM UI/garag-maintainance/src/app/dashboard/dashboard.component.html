@@ -2,7 +2,7 @@
     <span>Garage Management Dashboard</span>
 </mat-toolbar>
 
-<mat-grid-list cols="4" rowHeight="100px">
+<!-- <mat-grid-list cols="4" rowHeight="100px">
     <mat-grid-tile>
         <mat-card>
             <mat-card-header>
@@ -89,4 +89,75 @@
 
 
 <button mat-button (click)="successMessage()">Click</button>
-<br>
+<br> -->
+
+<mat-grid-list cols="4" rowHeight="2:1">
+    <mat-grid-tile style="background-color:#17a3b8;">
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <div class="count">
+                        150
+                    </div>
+                    <div class="dashboard_title">
+                        Total Booking
+                    </div>
+                </div>
+                <div class="column">
+                    <mat-icon fontSet="myfont" fontIcon="my-icon-name"></mat-icon>
+                </div>
+            </div>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile style="background-color: #27a745;">
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <div class="count">
+                        150
+                    </div>
+                    <div class="dashboard_title">
+                        Total Parking Slots
+                    </div>
+                </div>
+                <div class="column">
+                    <mat-icon fontSet="myfont" fontIcon="my-icon-name"></mat-icon>
+                </div>
+            </div>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile style="background-color: #017bff;">
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <div class="count">
+                        150
+                    </div>
+                    <div class="dashboard_title">
+                        Total Vehicles
+                    </div>
+                </div>
+                <div class="column">
+                    <mat-icon fontSet="myfont" fontIcon="my-icon-name"></mat-icon>
+                </div>
+            </div>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile style="background-color: #17a3b8;">
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <div class="count">
+                        150
+                    </div>
+                    <div class="dashboard_title">
+                        Total Number of Drivers
+                    </div>
+                </div>
+                <div class="column">
+                    <mat-icon fontSet="myfont" fontIcon="my-icon-name"></mat-icon>
+                </div>
+            </div>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>

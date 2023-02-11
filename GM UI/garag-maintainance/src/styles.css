@@ -26,3 +26,10 @@ body {
 .snackbar-info {
     background-color: blue;
 }
+
+mat-grid-tile-content {
+    background-color: inherit !important;
+    padding: 0 !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+}
