@@ -66,5 +66,23 @@ namespace Garage_Management.BAL.Implementation
             return data.ToList();
         }
 
+        public async Task<List<Vehicle>> GetByName(string VehicleName)
+        {
+            try
+            {
+                var dbconnect = new GMEntity<Vehicle>();
+                using var connection = dbconnect.GetConnection();
+                var result = await connection.QueryAsync<Vehicle>($"select * from vehicle where name = @Vehichlename", new { name = VehicleName });
+                return result.ToList();
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+
+            }
+
+        }
+
     }
 }

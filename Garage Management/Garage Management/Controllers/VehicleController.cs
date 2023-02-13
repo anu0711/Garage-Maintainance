@@ -53,6 +53,13 @@ namespace Garage_Management.Controllers
             return await _vehicle.GetAllDashbord();
         }
 
+        [HttpGet]
+
+        public async Task<List<Vehicle>> GetByName(string VehicleName)
+        {
+            return await _vehicle.GetByName(VehicleName);
+        }
+
 
     }
 }

@@ -15,5 +15,7 @@ namespace Garage_Management.Common.Interfaces
 
 
         Task<List<MaintenanceSummaryDomain>> GetMaintenanceSummary();
+
+        Task<List<Vehicle>> GetByName(string VehicleName);
     }
 }
