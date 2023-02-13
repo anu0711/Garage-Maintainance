@@ -11,12 +11,10 @@ namespace Garage_Management.Controllers
     public class VehicleController : ControllerBase
     {
         private readonly IVehicle _vehicle;
-        private readonly IBlob _blob;
 
-        public VehicleController (IVehicle vehicle,IBlob blob)
+        public VehicleController (IVehicle vehicle)
         {
             _vehicle = vehicle;
-            _blob = blob;
         }
 
         [HttpPost]
@@ -46,10 +44,13 @@ namespace Garage_Management.Controllers
             return await _vehicle.GetMaintenanceSummary();
         }
 
-        [HttpPost]
-        public async Task<Uri> UploadImage(string filePath)
+        
+
+        [HttpGet]
+
+        public async Task<List<DashCount>> GetAllDashbord()
         {
-            return await _blob.UploadImage(filePath);
+            return await _vehicle.GetAllDashbord();
         }
 
 

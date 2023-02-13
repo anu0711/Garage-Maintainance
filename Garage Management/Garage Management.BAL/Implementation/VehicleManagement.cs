@@ -14,12 +14,7 @@ namespace Garage_Management.BAL.Implementation
 {
     public class VehicleManagement : IVehicle
     {
-        private readonly IBlob _blob;
-
-        public VehicleManagement(IBlob blob)
-        {
-            _blob = blob;
-        }
+       
        
         public async Task AddorUpdateVehicle(Vehicle vehicle)
         {
@@ -41,6 +36,10 @@ namespace Garage_Management.BAL.Implementation
             return data.ToList();
         }
 
+
+
+
+
         public async Task<MaintenanceSummary> AddMaintenanceSummary(MaintenanceSummary maintenanceSummary)
         {
             var entity = new GMEntity<MaintenanceSummary>();
@@ -58,5 +57,14 @@ namespace Garage_Management.BAL.Implementation
             var entity = new GMEntity<MaintenanceSummary>();
             return (await entity.GetConnection().QueryAsync<MaintenanceSummaryDomain>("select * from MaintenanceSummary inner join Vehicle on Vehicle.Id = MaintenanceSummary.TruckId")).ToList();
         }
+
+        public async Task<List<DashCount>> GetAllDashbord()
+        {
+            var entity = new GMEntity<MaintenanceSummary>();
+            using var connection = entity.GetConnection();
+            var data = await connection.QueryAsync<DashCount>($"SELECT * FROM vw_Dashboard_details JOIN vw_Vehicle_count ON 1 = 1;");
+            return data.ToList();
+        }
+
     }
 }

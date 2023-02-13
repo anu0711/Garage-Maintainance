@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Garage_Management.BAL.Implementation
 {
-    public class Blob:IBlob
+    public class Blob
     {
         public async Task<Uri> UploadImage(string filepath)
         {
