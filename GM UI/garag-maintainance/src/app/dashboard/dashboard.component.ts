@@ -1,5 +1,6 @@
+import { ApiHandlerService } from 'src/app/api-handler.service';
 import { MessageHandlerService } from './../message-handler.service';
-import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { Component, TemplateRef, ViewChild, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
 
@@ -16,7 +17,7 @@ export interface Vehicle {
   styleUrls: ['./dashboard.component.css'],
 
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
   openForm() {
     throw new Error('Method not implemented.');
   }
@@ -27,11 +28,21 @@ export class DashboardComponent {
   vehicleModel: string = '';
   vehicleColor: string = '';
   vehicleLicensePlate: string = '';
+  dashBoardData: any[] = [];
+  isLoading: boolean = false;
 
   public showForm: boolean = false;
 
-  constructor(private Message: MessageHandlerService, private dialog: MatDialog) { }
+  constructor(private Message: MessageHandlerService, private dialog: MatDialog, private ApiClient: ApiHandlerService) { }
 
+  ngOnInit(): void {
+    this.isLoading = true;
+    this.ApiClient.GetDashBoardDetails().subscribe((data: any) => {
+      this.dashBoardData = data;
+      debugger;
+      this.isLoading = false;
+    })
+  }
 
   successMessage() {
     this.Message.success("Hello");

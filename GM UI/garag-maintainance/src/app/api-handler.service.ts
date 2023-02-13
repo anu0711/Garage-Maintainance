@@ -14,7 +14,9 @@ export class ApiHandlerService {
     return this.httpClient.get(this.baseUrl + '/posts');
   }
 
-
+  GetDashBoardDetails() {
+    return this.httpClient.get(this.baseUrl + '/api/Vehicle/GetAllDashbord')
+  }
 
   GetAllGarage() {
     return this.httpClient.get(this.baseUrl + '/api/Garage/GetAllGarage')

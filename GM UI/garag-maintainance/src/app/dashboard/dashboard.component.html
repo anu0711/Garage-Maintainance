@@ -97,10 +97,10 @@
             <div class="row">
                 <div class="column">
                     <div class="count">
-                        150
+                        {{dashBoardData[0].number_Of_Loads}}
                     </div>
                     <div class="dashboard_title">
-                        Total Booking
+                        Total Loads Today
                     </div>
                 </div>
                 <div class="column">
@@ -114,10 +114,11 @@
             <div class="row">
                 <div class="column">
                     <div class="count">
-                        150
+                        {{dashBoardData[0].totalEarnings}}
+
                     </div>
                     <div class="dashboard_title">
-                        Total Parking Slots
+                        Total Earning Today
                     </div>
                 </div>
                 <div class="column">
@@ -131,7 +132,8 @@
             <div class="row">
                 <div class="column">
                     <div class="count">
-                        150
+                        {{dashBoardData[0].vehicleCount}}
+
                     </div>
                     <div class="dashboard_title">
                         Total Vehicles
@@ -143,7 +145,7 @@
             </div>
         </div>
     </mat-grid-tile>
-    <mat-grid-tile style="background-color: #17a3b8;">
+    <!-- <mat-grid-tile style="background-color: #17a3b8;">
         <div class="container">
             <div class="row">
                 <div class="column">
@@ -159,5 +161,5 @@
                 </div>
             </div>
         </div>
-    </mat-grid-tile>
+    </mat-grid-tile> -->
 </mat-grid-list>
