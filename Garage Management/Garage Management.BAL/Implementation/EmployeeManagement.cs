@@ -29,5 +29,13 @@ namespace Garage_Management.BAL.Implementation
             var result = await connection.QueryAsync<EmployeeSummary>($"select * from employeesummary");
             return result.ToList();
         }
+
+        public async Task<List<EmployeeSummary>>GetSummaryById (Guid Id)
+        {
+            var dbconnect = new GMEntity<EmployeeSummary>();
+            using var connection = dbconnect.GetConnection();
+            var result = await connection.QueryAsync<EmployeeSummary>($"select * from employeesummary where id = @Id", new {id = Id});
+            return result.ToList();
+        }
     }
 }

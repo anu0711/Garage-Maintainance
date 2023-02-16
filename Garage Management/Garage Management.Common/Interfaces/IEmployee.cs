@@ -12,5 +12,7 @@ namespace Garage_Management.Common.Interfaces
         Task AddOrUpdateEmployee(EmployeeSummary employeeSummary);
 
         Task<List<EmployeeSummary>> GetEmployeeSummaries();
+
+        Task<List<EmployeeSummary>> GetSummaryById(Guid Id);
     }
 }

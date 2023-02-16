@@ -29,5 +29,13 @@ namespace Garage_Management.BAL.Implementation
             return data.ToList();
            
         }
+
+        public async Task<List<DailyWorkSummary>>GetDailyWorkById(Guid Id)
+        {
+            var dbconnect = new GMEntity<DailyWorkSummary>();
+            using var connection = dbconnect.GetConnection();
+            var result = await connection.QueryAsync<DailyWorkSummary>($"select * from dailyworksummary where id = @Id", new {Id = Id} );
+            return result.ToList(); 
+        }
     }
 }
