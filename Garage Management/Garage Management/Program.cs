@@ -16,9 +16,9 @@ builder.Services.AddTransient<IVehicle, VehicleManagement>();
 builder.Services.AddTransient<IGarage, GarageManagement>();
 builder.Services.AddTransient<IDailyWorkSummary, DailyWorkManagement>();
 builder.Services.AddTransient<IAuthentication, Authentication>();
-builder.Services.AddTransient<ITruck, TruckManagement>();
+builder.Services.AddTransient<ICounts, CountManagement>();
 builder.Services.AddTransient<IEmployee,EmployeeManagement>();
-//builder.Services.AddTransient<IBlob, Blob>();
+builder.Services.AddTransient<IReminder, Reminders>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -35,7 +35,7 @@ app.UseAuthorization();
 app.MapControllers();
 app.UseCors(options =>
 {
-    options.WithOrigins("http://localhost:3000")
+    options.WithOrigins("http://localhost:4200")
            .AllowAnyMethod()
            .AllowAnyHeader();
 });

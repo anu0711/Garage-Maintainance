@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Garage_Management.Common.Interfaces
 {
-    public interface Itest
+    public interface IReminder
     {
-        Task<string> Sample();
+        Task<long> GetProfit();
+        Task<long> GetLoss();
     }
 }

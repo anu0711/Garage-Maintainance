@@ -13,8 +13,7 @@ using System.Threading.Tasks;
 namespace Garage_Management.BAL.Implementation
 {
     public class VehicleManagement : IVehicle
-    {
-       
+    {       
        
         public async Task AddorUpdateVehicle(Vehicle vehicle)
         {
@@ -36,10 +35,6 @@ namespace Garage_Management.BAL.Implementation
             return data.ToList();
         }
 
-
-
-
-
         public async Task<MaintenanceSummary> AddMaintenanceSummary(MaintenanceSummary maintenanceSummary)
         {
             var entity = new GMEntity<MaintenanceSummary>();
@@ -48,14 +43,6 @@ namespace Garage_Management.BAL.Implementation
             }
             return maintenanceSummary;
 
-        }
-
-
-
-        public async Task<List<MaintenanceSummaryDomain>> GetMaintenanceSummary()
-        {
-            var entity = new GMEntity<MaintenanceSummary>();
-            return (await entity.GetConnection().QueryAsync<MaintenanceSummaryDomain>("select * from MaintenanceSummary inner join Vehicle on Vehicle.Id = MaintenanceSummary.TruckId")).ToList();
         }
 
         public async Task<List<DashCount>> GetAllDashbord()

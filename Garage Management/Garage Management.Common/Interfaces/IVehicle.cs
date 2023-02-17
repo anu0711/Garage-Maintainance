@@ -12,8 +12,5 @@ namespace Garage_Management.Common.Interfaces
         Task<List<DashCount>> GetAllDashbord();
 
         Task<MaintenanceSummary> AddMaintenanceSummary(MaintenanceSummary maintenanceSummary);
-
-
-        Task<List<MaintenanceSummaryDomain>> GetMaintenanceSummary();
     }
 }
