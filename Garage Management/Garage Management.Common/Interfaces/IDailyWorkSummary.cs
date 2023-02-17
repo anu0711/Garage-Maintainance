@@ -12,5 +12,7 @@ namespace Garage_Management.Common.Interfaces
         Task AddorUpdateDailyWork(DailyWorkSummary dailyWorkSummary);
 
         Task<List<DailyWorkSummary>> GetAllDailyWorkSummaries();
+
+        Task<List<DailyWorkSummary>> GetDailyWorkById(Guid id);
     }
 }

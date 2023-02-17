@@ -28,5 +28,13 @@ namespace Garage_Management.Controllers
             return await _dailyWorkSummary.GetAllDailyWorkSummaries();
         }
 
+        [HttpGet]
+
+        public async Task<List<DailyWorkSummary>> GetDailyWorkById(Guid id)
+        {
+            return await _dailyWorkSummary.GetDailyWorkById(id);
+
+        }
+
     }
 }

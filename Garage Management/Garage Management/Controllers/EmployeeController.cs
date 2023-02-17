@@ -27,5 +27,12 @@ namespace Garage_Management.Controllers
         {
             return await _employee.GetEmployeeSummaries();
         }
+
+        [HttpGet]
+
+        public async Task<List<EmployeeSummary>> GetSummaryById(Guid Id)
+        {
+            return await _employee.GetSummaryById(Id);
+        }
     }
 }
