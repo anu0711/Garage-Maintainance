@@ -33,7 +33,7 @@ namespace Garage_Management.Controllers
         }
 
         [HttpPost]
-        public async Task<MaintenanceSummary> MaintenanceSummary([FromBody] MaintenanceSummary maintenanceSummary)
+        public async Task<Spendings> MaintenanceSummary([FromBody] Spendings maintenanceSummary)
         {
             return await _vehicle.AddMaintenanceSummary(maintenanceSummary);
         }

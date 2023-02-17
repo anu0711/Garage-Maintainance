@@ -35,9 +35,9 @@ namespace Garage_Management.BAL.Implementation
             return data.ToList();
         }
 
-        public async Task<MaintenanceSummary> AddMaintenanceSummary(MaintenanceSummary maintenanceSummary)
+        public async Task<Spendings> AddMaintenanceSummary(Spendings maintenanceSummary)
         {
-            var entity = new GMEntity<MaintenanceSummary>();
+            var entity = new GMEntity<Spendings>();
             {
                 var Id = await entity.AddorUpdate(maintenanceSummary); 
             }
@@ -47,7 +47,7 @@ namespace Garage_Management.BAL.Implementation
 
         public async Task<List<DashCount>> GetAllDashbord()
         {
-            var entity = new GMEntity<MaintenanceSummary>();
+            var entity = new GMEntity<Spendings>();
             using var connection = entity.GetConnection();
             var data = await connection.QueryAsync<DashCount>($"SELECT * FROM vw_Dashboard_details JOIN vw_Vehicle_count ON 1 = 1;");
             return data.ToList();

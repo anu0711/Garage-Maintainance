@@ -19,8 +19,10 @@ namespace Garage_Management.DAL.Model
 
         public long TotalEarnings { get; set; }
 
-        public Guid SpendingSummaryId { get; set; }
+        public Guid SpendingId { get; set; }
 
-        public Guid TruckSummaryId { get; set; }
+        public Guid TruckId { get; set; }
+
+        public Guid employeeId { get; set; }
     }
 }

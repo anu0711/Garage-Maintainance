@@ -10,9 +10,9 @@ namespace Garage_Management.DAL.Model
     {
         public string VehicleName { get; set; }
         public string vehicleType { get; set; }
-        public bool RcStatus { get; set; }
+        public bool RcActive { get; set; }
         public string VehicleNumber { get; set; }
-        public DateTime InsuranceValidation { get; set; }
+        public DateTime InsuranceValidity { get; set; }
         public DateTime FitnessValidity { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Garage_Management.DAL.Model
 {
-    public class MaintenanceSummary : Entity
+    public class Spendings : Entity
     {
         public Guid Id { get; set; }    
         public string Detail { get; set; }

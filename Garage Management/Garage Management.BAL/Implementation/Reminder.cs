@@ -20,9 +20,9 @@ namespace Garage_Management.BAL.Implementation
         }
         public async Task<long> GetLoss()
         {
-            var a = new GMEntity<MaintenanceSummary>();
+            var a = new GMEntity<Spendings>();
             var connection = a.GetConnection();
-            var t = (await connection.QueryAsync<MaintenanceSummary>("SELECT Sum(Amount) as Amount FROM MaintenanceSummary ")).FirstOrDefault();
+            var t = (await connection.QueryAsync<Spendings>("SELECT Sum(Amount) as Amount FROM MaintenanceSummary ")).FirstOrDefault();
             return t.Amount;
         }
     }

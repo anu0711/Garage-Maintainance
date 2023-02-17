@@ -27,7 +27,7 @@ namespace Garage_Management.BAL.Implementation
         public async Task<List<Reminder>> GetBookings()
         {
             using var connection = this.GetConnection();
-            return (await connection.QueryAsync<Reminder>("select * from reminders where CONVERT(varchar, createddate, 103) = CONVERT(varchar, GetDate(), 103) order by createddate")).ToList();
+            return (await connection.QueryAsync<Reminder>("select * from bookings where CONVERT(varchar, createddate, 103) = CONVERT(varchar, GetDate(), 103) order by createddate")).ToList();
         }
     }
 
