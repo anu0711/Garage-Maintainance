@@ -19,6 +19,7 @@ namespace Garage_Management.DAL.Model
         public string BankName { get; set; }
         public string IFSC { get; set; }
         public string Branch { get; set; }
+        public Guid Role { get; set; }
 
 
     }

@@ -12,7 +12,7 @@ namespace Garage_Management.BAL.Implementation
         {
             using var connection = this.GetConnection();
             var counts = new CountModel();
-            var results = connection.QueryMultiple("Counts", commandType: CommandType.StoredProcedure);
+            var results = connection.QueryMultiple("pd_Counts", commandType: CommandType.StoredProcedure);
             var t = results.Read<(long Loads, long Income)>().ToList();
             counts.Spendings = results.Read<long>().FirstOrDefault();
             counts.Garage = results.Read<long>().FirstOrDefault();
