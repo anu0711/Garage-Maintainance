@@ -27,16 +27,18 @@
         <br>
         <mat-form-field>
             <mat-label>Vehicle Insurance</mat-label>
-            <input matInput [matDatepicker]="picker" class="width-100" formControlName="insuranceValidation">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
+            <input matInput [matDatepicker]="Insurance" class="width-100" formControlName="insuranceValidation">
+            <mat-datepicker-toggle matSuffix [for]="Insurance"></mat-datepicker-toggle>
+            <mat-datepicker #Insurance></mat-datepicker>
             <mat-error *ngIf=" insuranceValidation?.invalid && insuranceValidation?.errors?.required ">Vehicle Insurance
                 Date is Required</mat-error>
         </mat-form-field>
         <br>
         <mat-form-field>
             <mat-label>Vehicle Fitness</mat-label>
-            <input matInput class="width-100" formControlName="fitnessValidation">
+            <input matInput [matDatepicker]="Fitness" class="width-100" formControlName="fitnessValidation">
+            <mat-datepicker-toggle matSuffix [for]="Fitness"></mat-datepicker-toggle>
+            <mat-datepicker #Fitness></mat-datepicker>
             <mat-error *ngIf=" fitnessValidation?.invalid && fitnessValidation?.errors?.required ">Fitness statement is
                 Required</mat-error>
         </mat-form-field>

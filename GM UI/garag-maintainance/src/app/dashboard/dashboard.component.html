@@ -1,3 +1,6 @@
+<ng-container *ngIf="isLoading">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-container>
 <mat-toolbar color="primary">
     <span>Garage Management Dashboard</span>
 </mat-toolbar>
@@ -90,7 +93,6 @@
 
 <button mat-button (click)="successMessage()">Click</button>
 <br> -->
-
 <mat-grid-list cols="4" rowHeight="2:1">
     <mat-grid-tile style="background-color:#17a3b8;">
         <div class="container">

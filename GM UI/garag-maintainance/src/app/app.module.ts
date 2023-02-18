@@ -1,3 +1,4 @@
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { RouterModule } from '@angular/router';
@@ -22,7 +23,6 @@ import { AddOrUpdataVehicleComponent } from './vechical/add-or-updata-vehicle/ad
 import { AddOrUpdataGarageComponent } from './Pages/garage/add-or-updata-garage/add-or-updata-garage.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +44,7 @@ import { AddOrUpdataGarageComponent } from './Pages/garage/add-or-updata-garage/
     MatNativeDateModule,
     MaterialExampleModule,
     FormsModule,
+    MatCheckboxModule,
     ReactiveFormsModule,
     HttpClientModule,
     MatTableModule,

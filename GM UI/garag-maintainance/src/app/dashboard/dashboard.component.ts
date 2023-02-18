@@ -39,7 +39,6 @@ export class DashboardComponent implements OnInit {
     this.isLoading = true;
     this.ApiClient.GetDashBoardDetails().subscribe((data: any) => {
       this.dashBoardData = data;
-      debugger;
       this.isLoading = false;
     })
   }
