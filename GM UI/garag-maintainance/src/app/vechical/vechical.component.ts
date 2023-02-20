@@ -79,6 +79,8 @@ export class VechicalComponent implements OnInit {
     dialog.afterClosed().subscribe((result: any) => {
       console.log('colsed');
       this.refresh();
+      this.selection.clear();
+      this.selectedRow = [];
     })
   }
 

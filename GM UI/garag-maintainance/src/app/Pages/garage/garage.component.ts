@@ -82,6 +82,8 @@ export class GarageComponent implements OnInit {
     dialog.afterClosed().subscribe((result: any) => {
       console.log('colsed');
       this.ngOnInit();
+      this.selection.clear();
+      this.selectedRow = [];
     })
   }
 
