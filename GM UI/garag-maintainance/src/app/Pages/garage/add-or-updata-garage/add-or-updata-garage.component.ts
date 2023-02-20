@@ -11,17 +11,18 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AddOrUpdataGarageComponent {
 
-  isEdit: boolean;
+  isEdit: boolean = true;
 
 
   constructor(public dialogRef: MatDialogRef<AddOrUpdataGarageComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any, public fb: FormBuilder, private http: HttpClient) {
-    this.isEdit = false
+    if (this.data != undefined)
+      this.isEdit = true
     debugger;
   }
   form = new FormGroup({
-    name: new FormControl('', [Validators.required]),
-    location: new FormControl('', [Validators.required])
+    name: new FormControl(this.isEdit ? this.data.name : '', [Validators.required]),
+    location: new FormControl(this.isEdit ? this.data.location : '', [Validators.required])
   })
 
   get name() {
@@ -39,11 +40,4 @@ export class AddOrUpdataGarageComponent {
         location.reload();
       });
   }
-
-
-
-
-
-
-
 }

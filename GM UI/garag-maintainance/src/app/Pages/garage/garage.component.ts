@@ -29,10 +29,10 @@ export class GarageComponent implements OnInit {
     vehicleNumber: ''
   };
   garages: any[] = [];
-  displayedColumns: string[] = ['select','name', 'location'];
+  displayedColumns: string[] = ['select', 'name', 'location'];
   dataSource = new MatTableDataSource(this.garages);
   apiService: any;
-  selection = new SelectionModel<GarageModel>(true, []); 
+  selection = new SelectionModel<GarageModel>(true, []);
   selectedRow: any = [];
 
 
@@ -50,7 +50,7 @@ export class GarageComponent implements OnInit {
       });
   }
 
-  
+
 
   isAllSelected() {
     const numSelected = this.selection.selected.length;
@@ -78,7 +78,7 @@ export class GarageComponent implements OnInit {
   }
 
   openDialog() {
-    const dialog = this.dialog.open(AddOrUpdataGarageComponent, { width: '400px', panelClass: 'custom-dialog-container', data: this.displayedColumns });
+    const dialog = this.dialog.open(AddOrUpdataGarageComponent, { width: '400px', panelClass: 'custom-dialog-container', data: this.selectedRow[0] });
     dialog.afterClosed().subscribe((result: any) => {
       console.log('colsed');
     })
