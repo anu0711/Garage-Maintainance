@@ -1,3 +1,4 @@
+import { VehicleModel } from './vechical/vechical.component';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -37,6 +38,12 @@ export class ApiHandlerService {
     });
 
     return this.httpClient.post(this.baseUrl + '/api/Garage/AddorUpdateGarage', garage, { headers });
+  }
+  addOrUpdateVehicle(Vehicle: VehicleModel) {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    return this.httpClient.post(this.baseUrl + '/api/Vehicle/AddorUpdateVehicle', Vehicle);
   }
 
 }

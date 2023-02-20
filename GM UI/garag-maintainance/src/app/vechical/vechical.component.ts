@@ -38,6 +38,9 @@ export class VechicalComponent implements OnInit {
   constructor(private Apiclient: ApiHandlerService, public dialog: MatDialog) { }
 
   ngOnInit() {
+    this.refresh();
+  }
+  refresh() {
     this.isLoading = true;
     this.Apiclient.GetAllVehicle().subscribe(data => {
       this.data = data;

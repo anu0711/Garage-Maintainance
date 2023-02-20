@@ -21,6 +21,7 @@ import { DailyworkComponent } from './dailywork/dailywork.component';
 import { MaintanancesummaryComponent } from './maintanancesummary/maintanancesummary.component';
 import { AddOrUpdataVehicleComponent } from './vechical/add-or-updata-vehicle/add-or-updata-vehicle.component';
 import { AddOrUpdataGarageComponent } from './Pages/garage/add-or-updata-garage/add-or-updata-garage.component';
+import { DatePipe } from '@angular/common';
 
 
 @NgModule({
@@ -63,7 +64,9 @@ import { AddOrUpdataGarageComponent } from './Pages/garage/add-or-updata-garage/
     CUSTOM_ELEMENTS_SCHEMA,
     NO_ERRORS_SCHEMA
   ],
-  providers: [],
+  providers: [
+    DatePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
