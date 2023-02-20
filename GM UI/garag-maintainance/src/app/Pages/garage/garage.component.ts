@@ -81,6 +81,7 @@ export class GarageComponent implements OnInit {
     const dialog = this.dialog.open(AddOrUpdataGarageComponent, { width: '400px', panelClass: 'custom-dialog-container', data: this.selectedRow[0] });
     dialog.afterClosed().subscribe((result: any) => {
       console.log('colsed');
+      this.ngOnInit();
     })
   }
 
