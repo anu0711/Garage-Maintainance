@@ -3,10 +3,12 @@ import { AddOrUpdataGarageComponent } from './add-or-updata-garage/add-or-updata
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { ApiHandlerService } from 'src/app/api-handler.service';
-import { FormControl, FormGroup } from '@angular/forms';
-import { MatPaginator } from '@angular/material/paginator';
+import { SelectionModel } from '@angular/cdk/collections';
 
-
+export interface GarageModel {
+  location: string,
+  name: string
+}
 @Component({
   selector: 'app-garage',
   templateUrl: './garage.component.html',
@@ -27,9 +29,12 @@ export class GarageComponent implements OnInit {
     vehicleNumber: ''
   };
   garages: any[] = [];
-  displayedColumns: string[] = ['name', 'location'];
+  displayedColumns: string[] = ['select','name', 'location'];
   dataSource = new MatTableDataSource(this.garages);
   apiService: any;
+  selection = new SelectionModel<GarageModel>(true, []); 
+  selectedRow: any = [];
+
 
 
 
@@ -43,6 +48,33 @@ export class GarageComponent implements OnInit {
         this.dataSource = new MatTableDataSource(this.garages);
         console.log(this.dataSource);
       });
+  }
+
+  
+
+  isAllSelected() {
+    const numSelected = this.selection.selected.length;
+    const numRows = this.dataSource.data.length;
+    return numSelected === numRows;
+  }
+
+
+  toggleAllRows() {
+    if (this.isAllSelected()) {
+      this.selection.clear();
+      return;
+    }
+
+    this.selection.select(...this.dataSource.data);
+  }
+
+
+  checkboxLabel(row?: GarageModel): string {
+    this.selectedRow = this.selection.selected;
+    if (!row) {
+      return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
+    }
+    return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row`;
   }
 
   openDialog() {
