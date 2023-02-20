@@ -23,9 +23,6 @@ export class DailyworkComponent implements OnInit {
         this.dailywork = Object.values(data);
         this.dataSource = new MatTableDataSource(this.dailywork);
         console.log(this.dataSource);
-        debugger;
       });
-
-
   }
 }

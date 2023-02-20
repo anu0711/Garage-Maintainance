@@ -28,7 +28,6 @@ export class RegisterComponent {
 
   onFormSubmit() {
     var data = this.form;
-    debugger;
   }
 
 }
