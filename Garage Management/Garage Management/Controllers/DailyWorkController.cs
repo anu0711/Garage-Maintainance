@@ -16,9 +16,18 @@ namespace Garage_Management.Controllers
 
         [HttpPost]
 
-        public async void AddorUpdateDailyWork([FromBody] DailyWorkSummary dailyWorkSummary)
+        public async Task<IActionResult> AddorUpdateDailyWork([FromBody] DailyWorkSummary dailyWorkSummary)
         {
-            await _dailyWorkSummary.AddorUpdateDailyWork(dailyWorkSummary);
+            try
+            {
+                await _dailyWorkSummary.AddorUpdateDailyWork(dailyWorkSummary);
+                return Ok("Added/Updated Successfully");
+
+            }
+            catch(Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
         [HttpGet]

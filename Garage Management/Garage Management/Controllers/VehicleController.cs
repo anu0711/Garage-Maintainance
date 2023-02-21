@@ -19,10 +19,17 @@ namespace Garage_Management.Controllers
 
         [HttpPost]
 
-        public async void AddorUpdateVehicle([FromBody] Vehicle vehicle)
+        public async Task<IActionResult> AddorUpdateVehicle([FromBody] Vehicle vehicle)
         {
-            await _vehicle.AddorUpdateVehicle(vehicle);
-
+            try
+            {
+               await _vehicle.AddorUpdateVehicle(vehicle);
+                return Ok("Added/Updated Successfully");
+            }
+            catch(Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
         [HttpGet]

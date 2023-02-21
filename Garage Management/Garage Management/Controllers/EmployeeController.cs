@@ -17,9 +17,17 @@ namespace Garage_Management.Controllers
 
         [HttpPost]
 
-        public async void AddOrUpdateEmployeesummary([FromBody] EmployeeSummary employeeSummary)
+        public async Task<IActionResult> AddOrUpdateEmployeesummary([FromBody] EmployeeSummary employeeSummary)
         {
-            await _employee.AddOrUpdateEmployee(employeeSummary);
+            try
+            {
+                await _employee.AddOrUpdateEmployee(employeeSummary);
+                return Ok("Added/Updated Successfully");
+            }
+            catch(Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
 
         [HttpGet]

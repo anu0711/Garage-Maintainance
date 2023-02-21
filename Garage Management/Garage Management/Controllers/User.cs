@@ -18,18 +18,27 @@ namespace Garage_Management.Controllers
         }
 
         [HttpPost]
-        public async void AddOrUpdateEmployee([FromBody] Employee employee)
+        public async Task<IActionResult> AddOrUpdateEmployee([FromBody] Employee employee)
         {
-            await _usermanagement.Registeruser(employee);
+            try
+            {
+                await _usermanagement.Registeruser(employee);
+                return Ok("Added/Updated Successfully");
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpPost]
 
-        public async void LoginRegistration([FromBody] LoginModel register)
+        public async Task<IActionResult> LoginRegistration([FromBody] LoginModel register)
         {
             try
             {
                 await _usermanagement.LoginRegister(register);
+                return Ok("Added/Updated Successfully");
 
             }
             catch (Exception E)
