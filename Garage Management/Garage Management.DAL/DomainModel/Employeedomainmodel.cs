@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Garage_Management.DAL.Model
+namespace Garage_Management.DAL.DomainModel
 {
-    public class Employee : Entity
+    public class Employeedomainmodel
     {
         public string Name { get; set; }
         public string LicenseNo { get; set; }
@@ -19,7 +19,7 @@ namespace Garage_Management.DAL.Model
         public string BankName { get; set; }
         public string IFSC { get; set; }
         public string Branch { get; set; }
-        public Guid RoleId { get; set; }
+        public string Role { get; set; }
 
 
     }

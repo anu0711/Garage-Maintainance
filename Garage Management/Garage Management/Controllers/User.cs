@@ -1,6 +1,7 @@
 using Garage_Management.BAL.DomainModel;
 using Garage_Management.BAL.Implementation;
 using Garage_Management.Common.Interfaces;
+using Garage_Management.DAL.DomainModel;
 using Garage_Management.DAL.Model;
 using Microsoft.AspNetCore.Mvc;
 
@@ -69,8 +70,7 @@ namespace Garage_Management.Controllers
         }
 
         [HttpGet]
-
-        public async Task<List<Employee>> GetAllEmployee()
+        public async Task<List<Employeedomainmodel>> GetAllEmployee()
         {
             return await _usermanagement.GetAllEmployee();
         }

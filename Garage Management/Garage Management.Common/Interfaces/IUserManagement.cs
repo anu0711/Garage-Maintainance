@@ -1,4 +1,5 @@
 ﻿using Garage_Management.BAL.DomainModel;
+using Garage_Management.DAL.DomainModel;
 using Garage_Management.DAL.Model;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace Garage_Management.Common.Interfaces
 
         Task LoginRegister(LoginModel register);
 
-        Task<List<Employee>> GetAllEmployee();
+        Task<List<Employeedomainmodel>> GetAllEmployee();
 
         Task<Employee> GetBankDetails(Guid id);
 

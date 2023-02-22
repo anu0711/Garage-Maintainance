@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using Garage_Management.BAL.DomainModel;
 using Garage_Management.Common.Interfaces;
+using Garage_Management.DAL.DomainModel;
 using Garage_Management.DAL.Model;
 
 namespace Garage_Management.BAL.Implementation
@@ -57,10 +58,10 @@ namespace Garage_Management.BAL.Implementation
 
         }   
 
-        public async Task<List<Employee>> GetAllEmployee()
+        public async Task<List<Employeedomainmodel>> GetAllEmployee()
         {
             using var connection = this.GetConnection();
-            var data = await connection.QueryAsync<Employee>($"select * from Employee");
+            var data = await connection.QueryAsync<Employeedomainmodel>($"select * from Employee inner join role on role.id = employee.roleid");
              return data.ToList();
         }
 
