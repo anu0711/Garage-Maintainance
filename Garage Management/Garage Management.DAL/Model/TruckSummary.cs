@@ -15,9 +15,5 @@ namespace Garage_Management.DAL.Model
         public Guid TruckId { get; set; }
 
         public Guid EmployeeId { get; set; }
-
-        public string StartLocation { get; set; }
-
-        public string HaltLocation { get; set; }
     }
 }

@@ -19,6 +19,7 @@ builder.Services.AddTransient<IAuthentication, Authentication>();
 builder.Services.AddTransient<ICounts, CountManagement>();
 builder.Services.AddTransient<IEmployee,EmployeeManagement>();
 builder.Services.AddTransient<IReminder, Reminders>();
+builder.Services.AddTransient<ICurrentAsignee, CurrentAssignees>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

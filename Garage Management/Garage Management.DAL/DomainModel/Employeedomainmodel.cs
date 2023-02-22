@@ -11,6 +11,7 @@ namespace Garage_Management.DAL.DomainModel
         public string Name { get; set; }
         public string LicenseNo { get; set; }
         public int Age { get; set; }
+        public DateTime Dob { get; set; }
         public string MobileNumber { get; set; }
         public string IdNumber { get; set; }
         public string Address { get; set; }

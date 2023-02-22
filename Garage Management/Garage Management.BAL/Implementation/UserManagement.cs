@@ -40,7 +40,7 @@ namespace Garage_Management.BAL.Implementation
                 employee.MobileNumber = register.MobileNumber;
                 employee.Address = register.Address;
                 employee.AccountNumber = register.AccountNumber;
-                employee.Age = register.Age;
+                employee.Dob = register.Dob;
                 employee.BankName = register.BankName;
                 employee.Branch = register.Branch;
                 employee.IFSC = register.IFSC;
@@ -61,7 +61,7 @@ namespace Garage_Management.BAL.Implementation
         public async Task<List<Employeedomainmodel>> GetAllEmployee()
         {
             using var connection = this.GetConnection();
-            var data = await connection.QueryAsync<Employeedomainmodel>($"select * from Employee inner join role on role.id = employee.roleid");
+            var data = await connection.QueryAsync<Employeedomainmodel>($"select *,CAST(DATEDIFF(year, employee.dob, GETDATE()) AS int) AS Age from Employee inner join role on role.id = employee.roleid");
              return data.ToList();
         }
 
