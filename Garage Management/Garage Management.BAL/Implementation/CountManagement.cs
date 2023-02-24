@@ -29,6 +29,13 @@ namespace Garage_Management.BAL.Implementation
             using var connection = this.GetConnection();
             return (await connection.QueryAsync<Reminder>("select * from bookings where CONVERT(varchar, createddate, 103) = CONVERT(varchar, GetDate(), 103) order by createddate")).ToList();
         }
+
+        public async Task<List<Spendings>> GetSpendings()
+        {
+            using var connection = this.GetConnection();
+            return (await connection.QueryAsync<Spendings>("select * from spendings")).ToList();
+
+        }
     }
 
 }

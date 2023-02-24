@@ -59,8 +59,9 @@ namespace Garage_Management.BAL.Implementation
             {
                 var dbconnect = new GMEntity<Vehicle>();
                 using var connection = dbconnect.GetConnection();
-                var result = await connection.QueryAsync<Vehicle>($"select * from vehicle where name = @Vehichlename", new { name = VehicleName });
-                return result.ToList();
+                var result = "SELECT* FROM Vehicle WHERE VehicleName = @VehicleName";
+                var query = await connection.QueryAsync<Vehicle>(result, new { VehicleName = VehicleName });
+                return (List<Vehicle>)query;
 
             }
             catch (Exception e)
@@ -71,5 +72,21 @@ namespace Garage_Management.BAL.Implementation
 
         }
 
+        public async Task<List<Vehicle>> GetByVehicleType(string VehicleType)
+        {
+            var dbconnect = new GMEntity<Vehicle>();
+            using var connection = dbconnect.GetConnection();
+            var query = "SELECT * FROM Vehicle WHERE VehicleType = @VehicleType";
+            var vehicles = await connection.QueryAsync<Vehicle>(query, new { VehicleType = VehicleType });
+            return (List<Vehicle>)vehicles;
+        }
+
+        public async Task RemoveVehicle(Vehicle vehicle)
+        {
+            var dbconnect = new GMEntity<Vehicle>();
+            using var connection = dbconnect.GetConnection();
+            await connection.QueryAsync<Vehicle>("Delete from vehicle where Id = @Id", new { Id = vehicle.Id });
+
+        }
     }
 }
