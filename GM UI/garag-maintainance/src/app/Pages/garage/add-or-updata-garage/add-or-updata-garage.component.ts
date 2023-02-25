@@ -1,3 +1,5 @@
+import { MessageHandlerService } from './../../../message-handler.service';
+import { GarageModel } from './../garage.component';
 import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
@@ -11,19 +13,18 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AddOrUpdataGarageComponent {
 
-  isEdit: boolean = true;
-
+  isEdit: boolean = false;
+  form: any
 
   constructor(public dialogRef: MatDialogRef<AddOrUpdataGarageComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any, public fb: FormBuilder, private http: HttpClient) {
+    @Inject(MAT_DIALOG_DATA) public data: GarageModel, public fb: FormBuilder, private http: HttpClient, private MessageBar: MessageHandlerService) {
     if (this.data != undefined)
-      this.isEdit = true
-    debugger;
+      this.isEdit = true;
+    this.form = new FormGroup({
+      name: new FormControl(this.isEdit ? this.data.name : '', [Validators.required]),
+      location: new FormControl(this.isEdit ? this.data.location : '', [Validators.required])
+    })
   }
-  form = new FormGroup({
-    name: new FormControl(this.isEdit ? this.data.name : '', [Validators.required]),
-    location: new FormControl(this.isEdit ? this.data.location : '', [Validators.required])
-  })
 
   get name() {
     return this.form.get('name');
@@ -34,10 +35,29 @@ export class AddOrUpdataGarageComponent {
 
   onFormSubmit() {
     const url = 'https://localhost:7123/api/Garage/AddorUpdateGarage';
-    this.http.post(url, this.form.value)
+    var { name, location } = this.form.value;
+    var body: any = {
+      isActive: true,
+      location: location,
+      name: name
+    }
+    if (this.isEdit) {
+      body.id = this.data.id;
+      body.createdBy = this.data.createdBy;
+      body.createdDate = this.data.createdDate;
+      body.updatedBy = this.data.updatedBy;
+      body.updatedDate = this.data.updatedDate
+    }
+
+    this.http.post(url, body)
       .subscribe(response => {
         console.log(response);
-        location.reload();
       });
+    if (this.isEdit)
+      this.MessageBar.success("Edited successfully");
+    else
+      this.MessageBar.success("Added Successsfully")
+    this.dialogRef.close()
+
   }
 }

@@ -6,9 +6,16 @@ import { ApiHandlerService } from 'src/app/api-handler.service';
 import { SelectionModel } from '@angular/cdk/collections';
 
 export interface GarageModel {
+  id: any,
+  createdDate: Date,
+  updatedDate: Date,
+  isActive: boolean,
+  createdBy: any,
+  updatedBy: any,
   location: string,
   name: string
 }
+
 @Component({
   selector: 'app-garage',
   templateUrl: './garage.component.html',
@@ -42,14 +49,18 @@ export class GarageComponent implements OnInit {
 
 
   ngOnInit() {
+    this.refresh();
+  }
+
+  refresh() {
     this.http.GetAllGarage()
       .subscribe((data: any) => {
         this.garages = Object.values(data);
         this.dataSource = new MatTableDataSource(this.garages);
         console.log(this.dataSource);
       });
-  }
 
+  }
 
 
   isAllSelected() {
@@ -81,6 +92,7 @@ export class GarageComponent implements OnInit {
     const dialog = this.dialog.open(AddOrUpdataGarageComponent, { width: '400px', panelClass: 'custom-dialog-container', data: this.selectedRow[0] });
     dialog.afterClosed().subscribe((result: any) => {
       console.log('colsed');
+      this.refresh();
       this.ngOnInit();
       this.selection.clear();
       this.selectedRow = [];
