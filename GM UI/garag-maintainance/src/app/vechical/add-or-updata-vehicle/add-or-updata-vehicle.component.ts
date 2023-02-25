@@ -4,6 +4,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { VehicleModel } from '../vechical.component';
 import { DatePipe } from '@angular/common';
+import { MessageHandlerService } from 'src/app/message-handler.service';
 
 @Component({
   selector: 'app-add-or-updata-vehicle',
@@ -14,7 +15,7 @@ export class AddOrUpdataVehicleComponent {
   isEdit: boolean = false;
   form: any;
   constructor(public dialogRef: MatDialogRef<AddOrUpdataVehicleComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: VehicleModel, public fb: FormBuilder, public ApiClient: ApiHandlerService, private DatePipe: DatePipe) {
+    @Inject(MAT_DIALOG_DATA) public data: VehicleModel, public fb: FormBuilder, public ApiClient: ApiHandlerService, private DatePipe: DatePipe, private notification: MessageHandlerService) {
     if (data != undefined)
       this.isEdit = true
     this.form = new FormGroup({
@@ -49,16 +50,24 @@ export class AddOrUpdataVehicleComponent {
       vehicleType: vehicleType,
       vehicleNumber: vehicleNumber,
       insuranceValidity: insuranceValidation,
-      fitnessValidity: fitnessValidation
-    };
-    console.log(body);
+      fitnessValidity: fitnessValidation,
+      isActive: true
+    }
     if (this.isEdit) {
       body.id = this.data.id;
+      body.createdBy = this.data.createdBy;
+      body.createdDate = this.data.createdDate;
+      body.rcActive = this.data.rcActive;
+      body.updatedBy = this.data.updatedBy;
+      body.updatedDate = this.data.updatedDate
     }
     this.ApiClient.addOrUpdateVehicle(body).subscribe(data => {
-      console.log(data);
-      this.dialogRef.close();
     })
+    if (this.isEdit)
+      this.notification.success("Edited Successfully")
+    else
+      this.notification.success("Added SUccessfully");
+    this.dialogRef.close();
 
   }
 

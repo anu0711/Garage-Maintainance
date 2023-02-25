@@ -26,11 +26,5 @@ namespace Garage_Management.Controllers
             return await _counts.GetBookings();
         }
 
-        [HttpGet]
-
-        public async Task<List<Spendings>> GetSpendings()
-        {
-            return await _counts.GetSpendings();
-        }
     }
 }
