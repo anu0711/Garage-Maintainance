@@ -12,6 +12,7 @@ namespace Garage_Management.Common.Interfaces
     {
         Task<CountModel> GetCounts();
         Task<List<Reminder>> GetBookings();
+        Task<List<VehicleSpendings>> GetVehicleSpendings(string VehicleName);
     }
 
 }

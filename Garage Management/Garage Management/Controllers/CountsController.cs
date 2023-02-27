@@ -21,10 +21,12 @@ namespace Garage_Management.Controllers
         }
 
         [HttpGet]
-        public async Task<List<Reminder>> GetBookings()
+
+        public async Task<List<VehicleSpendings>> GetVehicleSpendings(string VehicleName)
         {
-            return await _counts.GetBookings();
+            return await _counts.GetVehicleSpendings(VehicleName);
         }
+
 
     }
 }

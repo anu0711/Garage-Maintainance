@@ -30,10 +30,12 @@ namespace Garage_Management.BAL.Implementation
             return (await connection.QueryAsync<Reminder>("select * from bookings where CONVERT(varchar, createddate, 103) = CONVERT(varchar, GetDate(), 103) order by createddate")).ToList();
         }
 
-        public async Task<List<Spendings>> GetSpendings()
+        
+
+        public async Task<List<VehicleSpendings>> GetVehicleSpendings(string VehicleName)
         {
             using var connection = this.GetConnection();
-            return (await connection.QueryAsync<Spendings>("select * from spendings")).ToList();
+            return (await connection.QueryAsync<VehicleSpendings>("select v.Id,v.VehicleName,v.VehicleNumber,v.VehicleType,s.amount,s.detail from vehicle v inner join spendings s on s.truckid = v.Id where VehicleName = @VehicleName", new { VehicleName = VehicleName })).ToList();
 
         }
     }
