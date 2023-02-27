@@ -14,5 +14,9 @@ namespace Garage_Management.Common.Interfaces
         Task<Spendings> AddMaintenanceSummary(Spendings maintenanceSummary);
 
         Task<List<Vehicle>> GetByName(string VehicleName);
+
+        Task<List<Vehicle>> GetByVehicleType(string VehicleType);
+
+        Task RemoveVehicle(Vehicle vehicle);    
     }
 }

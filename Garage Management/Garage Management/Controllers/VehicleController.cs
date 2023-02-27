@@ -60,8 +60,30 @@ namespace Garage_Management.Controllers
             return await _vehicle.GetByName(VehicleName);
         }
 
+        [HttpGet]
 
-       
+        public async Task<List<Vehicle>> GetByVehicleType(string VehicleType)
+        {
+            return await _vehicle.GetByVehicleType(VehicleType);
+        }
+
+        [HttpDelete]
+
+        public async Task<IActionResult> RemoveVehicle([FromBody] Vehicle vehicle)
+        {
+            try
+            {
+                await _vehicle.RemoveVehicle(vehicle);
+                return Ok("Removed Successfully");
+
+            }
+            catch (Exception E)
+            {
+                throw new Exception(E.Message);
+            }
+
+        }
+
 
     }
 }
